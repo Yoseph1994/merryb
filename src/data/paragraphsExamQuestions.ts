@@ -46,15 +46,10 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-missing-sentence',
     difficulty: 'medium',
-    question: 'A missing sentence begins with: "These innovative filtering devices remove microplastics efficiently." Where must it be inserted?',
-    options: [
-      'Directly after a sentence introducing the filtering devices',
-      'At the start of the passage before any technology is mentioned',
-      'After a sentence discussing government fishing regulations',
-      'At the very end of the bibliography'
-    ],
+    question: 'Where does the sentence "These innovative filtering devices remove microplastics efficiently." best fit?\n\nOcean pollution has reached critical levels worldwide. [1] Marine biologists recently deployed specialized nylon traps along the coastline. [2] As ocean currents pass through the harbor, marine life is shielded from synthetic debris. [3] Government regulators hope this initiative inspires regional adoption. [4]',
+    options: ['Slot [2]', 'Slot [1]', 'Slot [3]', 'Slot [4]'],
     correctAnswerIndex: 0,
-    explanation: '"These innovative filtering devices" is an anaphoric demonstrative phrase requiring the devices to be named directly before it.'
+    explanation: '"These innovative filtering devices" refers directly back to the "specialized nylon traps" deployed in the preceding sentence, placing it at Slot [2].'
   },
   {
     id: 'pq-05',
@@ -106,15 +101,15 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-main-idea',
     difficulty: 'medium',
-    question: 'Why is an option stating "In 2021, electric vehicle sales grew by 35%" usually INCORRECT as the main idea of a 4-paragraph essay on sustainable transportation?',
+    question: 'Read the passage: "Electric vehicles, expanded bicycle lanes, and high-speed commuter rail networks have transformed municipal commuting. Together, these modern transit initiatives reduce carbon emissions and ease downtown traffic congestion." What is the main idea?',
     options: [
-      'It is too narrow because it states only one isolated statistic',
-      'It contains a factual error',
-      'It is written in passive voice',
-      'It uses negative phrasing'
+      'Integrated sustainable transit options provide broad environmental and urban benefits.',
+      'Electric vehicle sales grew by 35% in dense metropolitan regions.',
+      'Bicycle commuting is the only practical transportation choice for city residents.',
+      'High-speed commuter trains are completely free of operating costs.'
     ],
     correctAnswerIndex: 0,
-    explanation: 'A single year\'s statistic is merely a supporting detail, making it far too narrow to serve as the overarching main idea.'
+    explanation: 'Option A synthesizes all three sustainable initiatives and their shared environmental and urban benefits.'
   },
   {
     id: 'pq-10',
@@ -176,15 +171,15 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-missing-sentence',
     difficulty: 'hard',
-    question: 'The sentence after the blank begins with: "On the other hand, the cost of manufacturing remained prohibitive." What must the preceding inserted sentence describe?',
+    question: 'Which sentence logically fills the blank?\n\n"The prototype solar panel demonstrated unprecedented conversion efficiency in field tests. ________ On the other hand, its complex manufacturing process remained too costly for immediate commercial release."',
     options: [
-      'A notable advantage or benefit of the product',
-      'A complete list of company debts',
-      'The CEO\'s retirement speech',
-      'A summary of global inflation rates'
+      'Researchers celebrated its exceptional ability to generate electricity from diffuse sunlight.',
+      'The company had suffered severe financial losses during the preceding decade.',
+      'Solar energy was initially harnessed using reflective mirrors in ancient times.',
+      'Consumers frequently complain about the aesthetic appearance of residential roofs.'
     ],
     correctAnswerIndex: 0,
-    explanation: '"On the other hand" sets up an opposing viewpoint, meaning the previous sentence must have presented positive qualities.'
+    explanation: 'The transition "On the other hand" sets up a contrast with prohibitive manufacturing costs, requiring the blank to state a positive technical achievement.'
   },
   {
     id: 'pq-16',
@@ -201,40 +196,45 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-main-idea',
     difficulty: 'easy',
-    question: 'What is the main function of the concluding sentence in a well-structured paragraph?',
+    question: 'Read the paragraph: "Daily physical exercise strengthens the cardiovascular system, improves mood regulation through endorphin release, and promotes restorative sleep." Which sentence provides the most effective CONCLUDING sentence?',
     options: [
-      'To summarize the core argument and provide closure',
-      'To introduce a completely new topic',
-      'To list every source in the bibliography',
-      'To provide contradictory statistics'
+      'Ultimately, regular physical activity serves as an indispensable pillar of overall health.',
+      'Furthermore, the first modern Olympic games took place in Athens in 1896.',
+      'However, specialized athletic footwear can be purchased at suburban shopping malls.',
+      'Nevertheless, refined sugar consumption remains high in western countries.'
     ],
     correctAnswerIndex: 0,
-    explanation: 'A concluding sentence synthesizes the central points and provides logical closure.'
+    explanation: 'Option A synthesizes all three health benefits and provides a strong, unified conclusion to the paragraph.'
   },
   {
     id: 'pq-18',
     topicId: 'paragraphs',
     lessonItemId: 'para-reordering',
     difficulty: 'medium',
-    question: 'Why is the sentence "They subsequently migrated south for the winter." disqualified from opening a passage?',
+    question: 'Which of the following sentences is the most appropriate OPENING sentence for a passage on arctic wildlife?',
     options: [
-      'The pronoun "They" lacks a prior antecedent noun',
-      'It contains a preposition',
-      'The word "winter" cannot start a text',
-      'It is written in past tense'
+      'Arctic terns undertake one of the longest annual migrations of any bird species on Earth.',
+      'They subsequently migrate south toward Antarctica for the winter.',
+      'Consequently, these polar journeys demand extraordinary physical endurance.',
+      'For this reason, researchers track their flight paths using miniature satellite transmitters.'
     ],
     correctAnswerIndex: 0,
-    explanation: 'Opening sentences cannot begin with unresolved third-person pronouns like "They".'
+    explanation: 'Option A introduces the subject "Arctic terns" directly without relying on pronouns ("They") or transition linkers.'
   },
   {
     id: 'pq-19',
     topicId: 'paragraphs',
     lessonItemId: 'para-inference-vs-fact',
     difficulty: 'medium',
-    question: 'Which word in a reading test option is a common signal that the option is an EXTREME distractor trap?',
-    options: ['always', 'generally', 'suggests', 'tends'],
+    question: 'Passage: "Preliminary clinical trials indicated that patients experienced noticeable symptom relief, though long-term efficacy remains under investigation." What can be logically inferred?',
+    options: [
+      'The treatment demonstrates encouraging initial results but requires continued scientific study.',
+      'The drug provides a permanent cure for all related illnesses without side effects.',
+      'The treatment proved completely ineffective in clinical settings.',
+      'The medical regulatory board has banned the medication from pharmacy distribution.'
+    ],
     correctAnswerIndex: 0,
-    explanation: 'Absolute words like "always", "never", and "solely" are prime markers of false distractors.'
+    explanation: 'Noticeable relief paired with ongoing investigation logically infers encouraging initial findings that still require further study.'
   },
   {
     id: 'pq-20',
@@ -271,15 +271,10 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-missing-sentence',
     difficulty: 'hard',
-    question: 'Sentence to insert: "Consequently, the city council imposed mandatory water rationing." Where does this belong?',
-    options: [
-      'Immediately following a sentence detailing severe reservoir drought levels',
-      'At the beginning of an essay on ancient water mythology',
-      'After a sentence praising the city\'s swimming facilities',
-      'In the footnote describing typography'
-    ],
+    question: 'Sentence to insert: "Consequently, the city council imposed mandatory water rationing." Where does it best fit?\n\nA severe heatwave settled over the river valley in late July. [1] Within three weeks, the municipal reservoir dropped to less than twenty percent capacity. [2] Residents were prohibited from watering lawns and washing vehicles until rainfall replenished supplies. [3] Meteorological forecasts predicted dry conditions for the remainder of the summer. [4]',
+    options: ['Slot [2]', 'Slot [1]', 'Slot [3]', 'Slot [4]'],
     correctAnswerIndex: 0,
-    explanation: 'Mandatory rationing is the logical consequence of a drought, which must be described immediately prior.'
+    explanation: 'The critical reservoir drop in [1] directly triggers the rationing in [2], which is immediately followed by specific bans on watering lawns.'
   },
   {
     id: 'pq-24',
@@ -366,30 +361,30 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-main-idea',
     difficulty: 'medium',
-    question: 'When reading a comprehension passage, what should you do if an answer choice uses the phrase "proves beyond doubt"?',
+    question: 'Passage: "Archaeological excavations at the coastal cave revealed bone hooks, stone net sinkers, and deep-water fish skeletons dating to 20,000 BCE." What is the main finding of the text?',
     options: [
-      'Check the passage carefully for qualifiers, as academic texts rarely claim absolute certainty',
-      'Select it immediately because it sounds strong',
-      'Assume the question is flawed',
-      'Ignore the rest of the options'
+      'Prehistoric coastal communities possessed the tools and skills for offshore marine fishing.',
+      'Bone hooks were the only hunting instruments used during the entire Ice Age.',
+      'Cave dwellers refused to consume any terrestrial animals.',
+      'Ancient oceans had far higher salinity levels than modern seas.'
     ],
     correctAnswerIndex: 0,
-    explanation: 'Academic passages normally use cautious language; options claiming absolute certainty are usually traps.'
+    explanation: 'Option A summarizes the presence of hooks, sinkers, and deep-water fish bones without making extreme or irrelevant assumptions.'
   },
   {
     id: 'pq-32',
     topicId: 'paragraphs',
     lessonItemId: 'para-missing-sentence',
     difficulty: 'hard',
-    question: 'Sentence to insert: "Such extreme climatic shifts have disrupted agricultural cycles worldwide." Which sentence must come immediately before it?',
+    question: 'Which sentence logically leads into the following statement?\n\n"________ Such extreme climatic shifts have disrupted agricultural cycles worldwide."',
     options: [
-      'A sentence detailing sudden global changes in temperature and rainfall',
-      'A sentence describing a farmer\'s favorite tractor model',
-      'A sentence defining the chemical formula for fertilizer',
-      'A sentence welcoming students to the agricultural college'
+      'Recent decades have witnessed prolonged droughts alternating with unprecedented flash flooding.',
+      'Local farmers often purchase diesel tractors from authorized regional distributors.',
+      'Chemical fertilizers contain nitrogen and phosphorus to stimulate crop growth.',
+      'University agricultural programs offer undergraduate degrees in soil science.'
     ],
     correctAnswerIndex: 0,
-    explanation: '"Such extreme climatic shifts" directly refers to explicit changes in temperature and rainfall introduced previously.'
+    explanation: '"Such extreme climatic shifts" refers directly back to droughts alternating with flash flooding.'
   },
   {
     id: 'pq-33',
@@ -406,15 +401,10 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-reordering',
     difficulty: 'medium',
-    question: 'In reordering jumbled sentences, what is the best strategy to link sentences together?',
-    options: [
-      'Identify paired relationships using pronouns, cause-and-effect, and time markers',
-      'Always put the shortest sentence first',
-      'Arrange sentences alphabetically by their first word',
-      'Place all sentences containing numbers at the end'
-    ],
+    question: 'Arrange the sentences in logical chronological sequence:\n(1) These observations prompted him to formulate the theory of natural selection.\n(2) In 1831, Charles Darwin boarded HMS Beagle for a five-year global survey.\n(3) During the voyage, he meticulously cataloged distinctive species on the Galápagos Islands.',
+    options: ['(2) - (3) - (1)', '(1) - (2) - (3)', '(3) - (2) - (1)', '(2) - (1) - (3)'],
     correctAnswerIndex: 0,
-    explanation: 'Identifying pronoun-antecedent pairs and cause-effect links forms the core technique of sentence ordering.'
+    explanation: 'Boarding the ship (2) precedes observations during the voyage (3), which leads to formulating the theory (1).'
   },
   {
     id: 'pq-35',
@@ -466,40 +456,40 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-main-idea',
     difficulty: 'easy',
-    question: 'Which of the following is true regarding a paragraph\'s topic sentence?',
+    question: 'Which sentence would make the most effective TOPIC SENTENCE for a paragraph detailing searchable online archives, high-resolution scans, and remote access to rare historical manuscripts?',
     options: [
-      'It encapsulates the central message that the rest of the paragraph develops',
-      'It must always be the longest sentence in the essay',
-      'It must include at least two exclamation marks',
-      'It cannot contain adjectives'
+      'Digital technology has fundamentally expanded public accessibility to rare historical archives.',
+      'Papyrus manuscripts were commonly rolled into scrolls in ancient Egyptian libraries.',
+      'Librarians must complete postgraduate studies in archival preservation.',
+      'Internet broadband providers charge fluctuating monthly subscription fees.'
     ],
     correctAnswerIndex: 0,
-    explanation: 'The topic sentence states the central message that subsequent sentences explain and support.'
+    explanation: 'Option A introduces the unifying theme of digital technology enhancing archive accessibility.'
   },
   {
     id: 'pq-40',
     topicId: 'paragraphs',
     lessonItemId: 'para-missing-sentence',
     difficulty: 'hard',
-    question: 'Sentence to insert: "This disparity in funding prompted widespread student protests." Where should this be placed?',
-    options: [
-      'Immediately after a sentence contrasting wealthy schools with underfunded ones',
-      'At the very start of the essay before any schools are mentioned',
-      'In a paragraph describing the chemistry laboratory curriculum',
-      'In the table of contents'
-    ],
+    question: 'Sentence to insert: "This disparity in funding prompted widespread student protests." Where does it best fit?\n\nA state audit revealed that suburban academies received double the budget allocation of inner-city schools. [1] Campus demonstrations erupted across the capital, with thousands demanding equitable funding. [2] In response, municipal authorities convened an emergency oversight committee. [3] A revised education budget was passed three weeks later. [4]',
+    options: ['Slot [1]', 'Slot [2]', 'Slot [3]', 'Slot [4]'],
     correctAnswerIndex: 0,
-    explanation: '"This disparity in funding" directly requires unequal school funding to be described in the preceding line.'
+    explanation: 'The sentence directly explains the immediate outcome of the funding audit (Slot [1]), leading into campus demonstrations (Slot [2]).'
   },
   {
     id: 'pq-41',
     topicId: 'paragraphs',
     lessonItemId: 'para-reordering',
     difficulty: 'hard',
-    question: 'Which word in a sentence is the strongest clue that it CANNOT be the first sentence of a paragraph?',
-    options: ['Furthermore', 'History', 'In 1999', 'Scientists'],
+    question: 'Which of the following sentences cannot logically serve as the OPENING sentence of a paragraph?',
+    options: [
+      'Furthermore, these policy adjustments failed to curb rising inflation.',
+      'Economic stability requires balanced fiscal and monetary governance.',
+      'In 2008, a major banking collapse affected financial markets worldwide.',
+      'Economists analyze consumer spending patterns to forecast quarterly growth.'
+    ],
     correctAnswerIndex: 0,
-    explanation: '"Furthermore" indicates an addition to an earlier argument and cannot open a passage.'
+    explanation: '"Furthermore" and "these policy adjustments" both rely on previously stated information, making it impossible as an opening sentence.'
   },
   {
     id: 'pq-42',
@@ -536,14 +526,14 @@ export const PARAGRAPHS_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'paragraphs',
     lessonItemId: 'para-inference-vs-fact',
     difficulty: 'easy',
-    question: 'An inference question asks you to identify something that is:',
+    question: 'Passage: "When the conductor tapped his baton, the audience immediately ceased whispering, programs rustled into laps, and all eyes turned toward the raised podium." What can be logically inferred?',
     options: [
-      'Logically suggested by textual evidence without being explicitly stated word-for-word',
-      'Directly copied from the first sentence',
-      'A fabricated opinion based on pure imagination',
-      'The opposite of whatever the author claims'
+      'The musical performance was about to begin.',
+      'An emergency building evacuation was underway.',
+      'The concert hall had lost electrical power.',
+      'The audience was dissatisfied with the orchestra.'
     ],
     correctAnswerIndex: 0,
-    explanation: 'Inferences are logically drawn from textual clues without having to be quoted word-for-word.'
+    explanation: 'The conductor tapping his baton, the audience quieting down, and looking at the podium logically indicates the performance is starting.'
   }
 ];

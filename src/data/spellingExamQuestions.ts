@@ -156,8 +156,8 @@ export const SPELLING_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'spelling',
     lessonItemId: 'spell-i-before-e',
     difficulty: 'medium',
-    question: 'Which of the following is a famous rule-breaker exception spelled with "EI"?',
-    options: ['weird', 'wield', 'shield', 'thief'],
+    question: 'The laboratory technicians observed an unusually _____ signal on the oscilloscope.',
+    options: ['weird', 'wierd', 'weired', 'wiered'],
     correctAnswerIndex: 0,
     explanation: '"Weird" is an irregular exception spelled w-e-i-r-d, breaking "I before E".'
   },
@@ -306,7 +306,7 @@ export const SPELLING_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'spelling',
     lessonItemId: 'spell-uk-us-misspelled',
     difficulty: 'medium',
-    question: 'In standard British English, how is the word meaning "the middle" spelled?',
+    question: 'The international delegates gathered at the conference _____ for the opening ceremony.',
     options: ['centre', 'center', 'centur', 'centar'],
     correctAnswerIndex: 0,
     explanation: 'British English standard uses -re: "centre".'
@@ -436,10 +436,10 @@ export const SPELLING_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'spelling',
     lessonItemId: 'spell-uk-us-misspelled',
     difficulty: 'medium',
-    question: 'In standard British spelling, which verb ending is preferred for "to examine"?',
+    question: 'The research institute will thoroughly _____ the groundwater samples for chemical pollutants.',
     options: ['analyse', 'analyze', 'analise', 'analize'],
     correctAnswerIndex: 0,
-    explanation: 'British standard uses -yse: "analyse".'
+    explanation: 'British English standard uses -yse: "analyse".'
   },
   {
     id: 'sq-45',

@@ -69,10 +69,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-mi-p2',
         type: 'fill_gap',
-        prompt: 'A topic sentence acts as an umbrella under which all _____ details must fit.',
-        options: ['supporting', 'contrasting', 'unrelated', 'grammatical'],
+        prompt: 'Read: "A balanced diet provides essential vitamins, promotes metabolic stability, and strengthens immune defense." This passage emphasizes that balanced nutrition _____ overall physical health.',
+        options: ['supports', 'diminishes', 'replaces', 'neglects'],
         correctAnswer: 0,
-        explanation: 'All supporting details, statistics, and examples must fit under the umbrella of the topic sentence.'
+        explanation: 'The sentence outlines the multiple supporting health benefits of balanced nutrition.'
       },
       {
         id: 'para-mi-p3',
@@ -86,14 +86,14 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-mi-p4',
         type: 'match_pairs',
-        prompt: 'Match paragraph component to its function:',
+        prompt: 'Match each sentence from a text on honeybees to its paragraph role:',
         pairs: [
-          { left: 'Topic Sentence', right: 'States the central thesis' },
-          { left: 'Supporting Detail', right: 'Supplies evidence or statistics' },
-          { left: 'Too Narrow Option', right: 'Refers to only one specific fact' },
-          { left: 'Concluding Sentence', right: 'Synthesizes the key takeaway' }
+          { left: 'Honeybees perform vital ecological roles.', right: 'Topic Sentence (Main Idea)' },
+          { left: 'They pollinate 70% of food crops.', right: 'Supporting Evidence' },
+          { left: 'In 2020, colonies declined by 12%.', right: 'Specific Statistic' },
+          { left: 'Protecting hives is thus crucial.', right: 'Concluding Takeaway' }
         ],
-        explanation: 'Recognizing these distinct roles allows you to dismiss distractors immediately.'
+        explanation: 'Recognizing these distinct roles allows you to identify main ideas quickly on exams.'
       }
     ],
     retryPractice: [
@@ -113,10 +113,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-mi-r2',
         type: 'fill_gap',
-        prompt: 'An option that is factually mentioned in the text but only covers one sentence is too _____ to be the main idea.',
-        options: ['narrow', 'broad', 'creative', 'general'],
+        prompt: 'Read: "Early seafaring navigators charted voyages using constellations, ocean currents, and prevailing trade winds." What is the main idea? Ancient navigators used diverse natural clues to _____ ocean voyages.',
+        options: ['guide', 'avoid', 'delay', 'prohibit'],
         correctAnswer: 0,
-        explanation: 'A detail that represents only one sentence is "too narrow" to be the central main idea.'
+        explanation: 'The sentence illustrates that navigators relied on constellations, currents, and winds to guide voyages.'
       },
       {
         id: 'para-mi-r3',
@@ -134,15 +134,15 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-mi-r4',
         type: 'multiple_choice',
-        prompt: 'Where is the topic sentence most commonly positioned in academic exam texts?',
+        prompt: 'Read: "Urban parks provide vital green spaces for city dwellers. They offer quiet areas for relaxation, trees that filter air pollution, and safe recreational fields for children." Which sentence is the TOPIC SENTENCE?',
         options: [
-          'In the first or second sentence',
-          'Exactly in the middle sentence',
-          'In a footnote',
-          'At the very end of the second paragraph'
+          'Urban parks provide vital green spaces for city dwellers.',
+          'They offer quiet areas for relaxation.',
+          'Trees that filter air pollution.',
+          'Safe recreational fields for children.'
         ],
         correctAnswer: 0,
-        explanation: 'Most expository paragraphs place the topic sentence right at the beginning.'
+        explanation: 'The first sentence states the central umbrella idea that all other sentences develop.'
       }
     ],
     rememberCard: {
@@ -222,10 +222,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-ro-p2',
         type: 'fill_gap',
-        prompt: 'A sentence beginning with "Therefore, these findings..." must come _____ the original findings are introduced.',
-        options: ['after', 'before', 'at the very start', 'independently of'],
+        prompt: 'The laboratory experiment yielded inconsistent data; _____, the researchers repeated the trials with a larger sample.',
+        options: ['therefore', 'otherwise', 'nevertheless', 'whereas'],
         correctAnswer: 0,
-        explanation: '"These findings" requires the specific findings to be defined beforehand.'
+        explanation: 'Repeating the trial is the direct logical outcome of inconsistent data, requiring "therefore".'
       },
       {
         id: 'para-ro-p3',
@@ -252,23 +252,23 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-ro-r1',
         type: 'multiple_choice',
-        prompt: 'Why CANNOT the sentence "Consequently, the conference was postponed." be the opening sentence?',
+        prompt: 'Which of the following sentences cannot logically serve as the OPENING sentence of a paragraph?',
         options: [
-          'It starts with a cause-effect linker indicating a prior event',
-          'It is too short',
-          'It does not contain a verb',
-          'It uses passive voice'
+          'Consequently, the international symposium was postponed until April.',
+          'Severe blizzards disrupted flight schedules across northern Europe.',
+          'Astronomers observed a rare solar eclipse through the mountain telescope.',
+          'The museum opened a new wing dedicated to ancient Mediterranean ceramics.'
         ],
         correctAnswer: 0,
-        explanation: '"Consequently" explicitly indicates an outcome resulting from a prior circumstance.'
+        explanation: '"Consequently" explicitly indicates an outcome resulting from a prior circumstance, so it cannot open a paragraph.'
       },
       {
         id: 'para-ro-r2',
         type: 'fill_gap',
-        prompt: 'When reordering sentences, identify the noun before linking it to its corresponding _____ .',
-        options: ['pronoun', 'conjunction', 'preposition', 'punctuation'],
+        prompt: 'Read: "Scientists introduced a colony of bees into the orchard. Soon, _____ began pollinating the apple blossoms."',
+        options: ['they', 'it', 'he', 'she'],
         correctAnswer: 0,
-        explanation: 'Nouns always precede the pronouns (he, she, it, they) that refer to them.'
+        explanation: 'The plural noun "bees" takes the subject pronoun "they".'
       },
       {
         id: 'para-ro-r3',
@@ -371,10 +371,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-odd-p2',
         type: 'fill_gap',
-        prompt: 'The odd sentence out usually shares the same general subject, but deviates from the specific _____ of the paragraph.',
-        options: ['focus', 'grammar', 'length', 'font'],
+        prompt: 'Identify the odd sentence: "(1) Renewable energy systems generate electricity cleanly. (2) Solar panel costs have plummeted. (3) Local coal mines were profitable in 1890. (4) Consequently, solar adoption is surging." Sentence 3 breaks the _____ of the text.',
+        options: ['unity', 'spelling', 'pronunciation', 'length'],
         correctAnswer: 0,
-        explanation: 'It breaks paragraph unity by drifting away from the specific focus or argument.'
+        explanation: 'Sentence 3 brings up 19th-century coal mines, breaking the paragraph unity of modern solar energy.'
       },
       {
         id: 'para-odd-p3',
@@ -410,10 +410,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-odd-r2',
         type: 'fill_gap',
-        prompt: 'An odd sentence out that introduces emotional complaints into an objective scientific passage is a _____ shift.',
-        options: ['tone', 'length', 'spelling', 'phonetic'],
+        prompt: 'Identify the odd sentence: (1) Cacti store water in thick stems. (2) Their leaves are sharp spines. (3) Sand dunes shift in strong winds. (4) Shallow roots capture rare rain. Sentence _____ is the odd sentence.',
+        options: ['3', '1', '2', '4'],
         correctAnswer: 0,
-        explanation: 'A tone shift disrupts the cohesive analytical style of academic writing.'
+        explanation: 'Sentence 3 discusses shifting sand dunes rather than biological plant adaptations.'
       },
       {
         id: 'para-odd-r3',
@@ -431,15 +431,15 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-odd-r4',
         type: 'multiple_choice',
-        prompt: 'What is the most effective strategy to find the odd sentence out?',
+        prompt: 'Find the odd sentence in a paragraph about desert reptile survival: (1) Desert lizards burrow underground to escape scorching midday heat. (2) Their specialized scales minimize moisture loss through evaporation. (3) Highway speed limits in desert regions are monitored by radar. (4) They emerge at dawn and dusk when temperatures are moderate.',
         options: [
-          'Identify the single core thesis and find the sentence that doesn\'t support it',
-          'Choose the longest sentence in the passage',
-          'Pick the sentence with the fewest adjectives',
-          'Select the sentence located in the middle'
+          'Sentence 3',
+          'Sentence 1',
+          'Sentence 2',
+          'Sentence 4'
         ],
         correctAnswer: 0,
-        explanation: 'Testing whether each sentence directly advances the central thesis immediately exposes the outlier.'
+        explanation: 'Sentence 3 refers to highway traffic laws, breaking the zoological focus on reptile survival mechanisms.'
       }
     ],
     rememberCard: {
@@ -506,23 +506,18 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-ms-p1',
         type: 'multiple_choice',
-        prompt: 'Sentence to insert: "These miniature sensors transmit data directly to a satellite." Where does it belong?',
-        options: [
-          'Immediately after a sentence describing the design of miniature sensors',
-          'At the very start of the essay before any technology is mentioned',
-          'After a conclusion discussing future funding',
-          'In the bibliography section'
-        ],
+        prompt: 'Where does the sentence "These miniature sensors transmit data directly to a satellite." best fit?\n\nWildlife biologists attached tracking devices to migrating caribou. [1] As the herd traverses arctic tundra, environmental information is gathered continually. [2] Researchers can thus monitor herd movements in real time. [3] This technology has revolutionized conservation efforts. [4]',
+        options: ['Slot [1]', 'Slot [2]', 'Slot [3]', 'Slot [4]'],
         correctAnswer: 0,
-        explanation: '"These miniature sensors" requires the miniature sensors to be specifically introduced in the sentence immediately prior.'
+        explanation: '"These miniature sensors" links directly to the "tracking devices" mentioned in the first sentence (Slot [1]).'
       },
       {
         id: 'para-ms-p2',
         type: 'fill_gap',
-        prompt: 'When placing a missing sentence, look _____ for what it refers back to, and look _____ for what it leads into.',
-        options: ['left / right', 'up / down', 'inside / outside', 'forward / backward'],
+        prompt: 'Insert the logical transition: "The team failed to secure private venture capital. _____, government research grants allowed them to proceed with trials."',
+        options: ['However', 'Therefore', 'Furthermore', 'Similarly'],
         correctAnswer: 0,
-        explanation: 'Check the left sentence for antecedent context, and the right sentence for smooth forward flow.'
+        explanation: 'Failing to secure capital contrasted with receiving government grants requires "However".'
       },
       {
         id: 'para-ms-p3',
@@ -550,23 +545,23 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-ms-r1',
         type: 'multiple_choice',
-        prompt: 'If the following sentence begins with "However, this unexpected discovery puzzled the biologists.", what must the missing sentence before it contain?',
+        prompt: 'Which sentence logically precedes: "However, this unexpected finding puzzled the geneticists."?',
         options: [
-          'A description of an unexpected discovery',
-          'A list of laboratory equipment costs',
-          'A biography of the head university dean',
-          'A general quote about ancient history'
+          'Initial DNA sequencing revealed gene mutations never before documented in the species.',
+          'Laboratory electricity bills were paid promptly at the beginning of each quarter.',
+          'University students frequently study in the campus cafeteria on weekends.',
+          'Scientific glass beakers should be washed thoroughly after chemical experiments.'
         ],
         correctAnswer: 0,
-        explanation: '"This unexpected discovery" in the right sentence demands that the discovery be stated right before it.'
+        explanation: '"This unexpected finding" directly refers to novel gene mutations introduced in the preceding sentence.'
       },
       {
         id: 'para-ms-r2',
         type: 'fill_gap',
-        prompt: 'A demonstrative pronoun like "These barriers" acts as an _____ that anchors the sentence to preceding text.',
-        options: ['anchor', 'obstacle', 'adjective', 'antonym'],
+        prompt: 'Read: "Engineers constructed massive concrete seawalls along the harbor. _____ barriers shielded coastal neighborhoods during the hurricane."',
+        options: ['These', 'This', 'That', 'An'],
         correctAnswer: 0,
-        explanation: 'Demonstrative pronouns anchor the sentence firmly to its antecedent.'
+        explanation: 'The plural noun "barriers" refers back to the seawalls, requiring the plural demonstrative "These".'
       },
       {
         id: 'para-ms-r3',
@@ -811,10 +806,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-inf-p2',
         type: 'fill_gap',
-        prompt: 'Answer choices with extreme words like "always", "never", and "completely" are usually _____ options.',
-        options: ['incorrect', 'correct', 'topic sentences', 'inferences'],
+        prompt: 'Passage: "Archaeologists discovered charcoal deposits alongside crushed animal bones in the hearth layers." Early humans processed food and game near the _____ pit.',
+        options: ['fire', 'water', 'burial', 'tool'],
         correctAnswer: 0,
-        explanation: 'Examiners use extreme language to turn otherwise plausible choices into false distractors.'
+        explanation: 'Charcoal deposits and hearth layers logically indicate a fire pit.'
       },
       {
         id: 'para-inf-p3',
@@ -855,10 +850,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-inf-r2',
         type: 'fill_gap',
-        prompt: 'A valid inference must be supported by textual evidence, never by _____ guesses or outside trivia.',
-        options: ['unfounded', 'logical', 'careful', 'direct'],
+        prompt: 'Passage: "The laboratory refrigerator thermometer read 18°C instead of the mandated 4°C, and several bacterial cultures showed abnormal fungal growth." The cooling system _____ , compromising the samples.',
+        options: ['failed', 'improved', 'accelerated', 'surpassed'],
         correctAnswer: 0,
-        explanation: 'Inferences must rely solely on clues inside the passage.'
+        explanation: 'An 18°C reading instead of 4°C indicates the cooling system failed.'
       },
       {
         id: 'para-inf-r3',
@@ -876,15 +871,15 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-inf-r4',
         type: 'multiple_choice',
-        prompt: 'Why should you avoid using personal outside knowledge on a reading test?',
+        prompt: 'Passage: "Recent ice core data indicates that carbon dioxide concentrations fluctuated sharply between glacial periods, yet temperatures followed with a slight lag." What does the core data demonstrate?',
         options: [
-          'The questions evaluate your comprehension of this specific author\'s argument',
-          'Exam boards forbid reading outside books',
-          'Outside knowledge is always inaccurate',
-          'The test takes away points for true facts'
+          'A close temporal relationship between atmospheric carbon dioxide and temperature shifts.',
+          'Glacial periods always lasted exactly ten million years.',
+          'Carbon dioxide is completely harmless to polar ice.',
+          'Temperature changes never had any effect on planetary ice.'
         ],
         correctAnswer: 0,
-        explanation: 'Comprehension tests your understanding of the text provided, not external information.'
+        explanation: 'The data logically demonstrates a temporal relationship between atmospheric CO2 and temperature.'
       }
     ],
     rememberCard: {
@@ -999,10 +994,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-tp-r2',
         type: 'fill_gap',
-        prompt: 'Tone describes the author\'s emotional _____ toward the subject matter.',
-        options: ['attitude', 'grammar', 'length', 'paragraphing'],
+        prompt: 'Passage: "The author methodically contrasts renewable energy output with fossil fuel emissions, presenting comparative charts without expressive adjectives." The tone is _____ and analytical.',
+        options: ['objective', 'angry', 'playful', 'sarcastic'],
         correctAnswer: 0,
-        explanation: 'Tone reveals the author\'s attitude and stance.'
+        explanation: 'Presenting charts and statistics without expressive adjectives establishes an objective tone.'
       },
       {
         id: 'para-tp-r3',
@@ -1020,10 +1015,10 @@ export const PARAGRAPHS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'para-tp-r4',
         type: 'multiple_choice',
-        prompt: 'Which tone word is most commonly correct in standard entrance examination reading passages?',
-        options: ['Analytical', 'Hysterical', 'Rage-filled', 'Comical'],
+        prompt: 'An editorial concludes: "Municipal councils must enforce immediate industrial emissions caps before irreversible environmental tipping points are crossed." What is the author\'s primary purpose?',
+        options: ['To urge immediate policy intervention', 'To explain ancient history', 'To entertain readers with humor', 'To describe the mechanics of automobiles'],
         correctAnswer: 0,
-        explanation: 'Academic passages selected for exams almost uniformly maintain an analytical or measured tone.'
+        explanation: 'Urging municipal councils to enforce caps is an explicit call to policy action.'
       }
     ],
     rememberCard: {

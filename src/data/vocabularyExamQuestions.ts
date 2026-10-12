@@ -36,7 +36,7 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-formal-register',
     difficulty: 'easy',
-    question: 'Choose the most formal academic replacement for "get": "Candidates must _____ a score of at least 80% to qualify."',
+    question: 'Candidates must _____ a score of at least 80% to qualify for the scholarship.',
     options: ['obtain', 'grab', 'pick up', 'catch'],
     correctAnswerIndex: 0,
     explanation: '"Obtain" or "achieve" represents formal academic register for "get".'
@@ -46,15 +46,15 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-word-roots',
     difficulty: 'easy',
-    question: 'The Latin root "bene" means "good". What does the word "benefactor" describe?',
+    question: 'Choose the word closest in meaning (SYNONYM) to BENEFACTOR:',
     options: [
-      'A person who gives financial or other aid to support a cause',
-      'A criminal who damages public infrastructure',
-      'A clockmaker who records ancient history',
-      'An opponent who criticizes political policy'
+      'Patron / Supporter',
+      'Critic / Detractor',
+      'Rival / Adversary',
+      'Bystander / Spectator'
     ],
     correctAnswerIndex: 0,
-    explanation: 'A benefactor is someone who does good by providing support or donations.'
+    explanation: 'A "benefactor" is a person who gives financial or other support to a cause; closest synonym is patron or supporter.'
   },
   {
     id: 'vq-06',
@@ -79,27 +79,27 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
   {
     id: 'vq-08',
     topicId: 'vocabulary',
-    lessonItemId: 'voc-idioms-context',
+    lessonItemId: 'voc-synonyms-nuances',
     difficulty: 'easy',
-    question: 'When the committee chair stated that the deficit was due to unchecked spending, everyone agreed she had "hit the nail on the head." What does this idiom mean?',
+    question: 'Choose the word closest in meaning (SYNONYM) to LUCID:',
     options: [
-      'Identified the exact truth accurately',
-      'Caused physical damage to the boardroom table',
-      'Made a dangerous accusation without evidence',
-      'Postponed the meeting indefinitely'
+      'Clear and easily understood',
+      'Murky and obscure',
+      'Vague and ambiguous',
+      'Complicated and dense'
     ],
     correctAnswerIndex: 0,
-    explanation: '"Hit the nail on the head" means to state or identify something with complete accuracy.'
+    explanation: '"Lucid" means expressed clearly and easy to comprehend.'
   },
   {
     id: 'vq-09',
     topicId: 'vocabulary',
     lessonItemId: 'voc-context-clues',
     difficulty: 'medium',
-    question: 'Sentence: "Unlike her brother who was verbose and never stopped talking, Maya was exceptionally taciturn." What does "taciturn" mean?',
-    options: ['Quiet and untalkative', 'Noisy and boisterous', 'Wealthy and generous', 'Physically athletic'],
+    question: 'In the sentence "Unlike her talkative brother, Maya was exceptionally taciturn", the word TACITURN is closest in meaning (SYNONYM) to:',
+    options: ['Reserved and quiet', 'Boisterous and loud', 'Generous and kind', 'Hostile and aggressive'],
     correctAnswerIndex: 0,
-    explanation: 'The contrast word "Unlike" shows that "taciturn" is the opposite of "verbose" (talkative).'
+    explanation: '"Taciturn" means habitually quiet, reserved, or disinclined to speak.'
   },
   {
     id: 'vq-10',
@@ -136,8 +136,8 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-formal-register',
     difficulty: 'medium',
-    question: 'Which word is the most FORMAL replacement for "ask for" in an official business email?',
-    options: ['request', 'demand', 'call up', 'plead'],
+    question: 'The applicant submitted a formal written _____ for a two-week extension on the project deadline.',
+    options: ['request', 'plea', 'nag', 'demand'],
     correctAnswerIndex: 0,
     explanation: '"Request" is the appropriate formal academic/professional replacement for "ask for".'
   },
@@ -146,8 +146,8 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-word-roots',
     difficulty: 'medium',
-    question: 'The prefix "chrono-" relates to time. A condition that persists over an extended duration is described as:',
-    options: ['chronic', 'chronicle', 'beneficial', 'constructive'],
+    question: 'Choose the word closest in meaning (SYNONYM) to CHRONIC:',
+    options: ['Persistent / Long-lasting', 'Temporary / Brief', 'Mild / Painless', 'Instant / Sudden'],
     correctAnswerIndex: 0,
     explanation: '"Chronic" refers to an illness or condition that persists over an extended period of time.'
   },
@@ -164,17 +164,17 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
   {
     id: 'vq-16',
     topicId: 'vocabulary',
-    lessonItemId: 'voc-idioms-context',
+    lessonItemId: 'voc-synonyms-nuances',
     difficulty: 'medium',
-    question: 'Although missing her flight felt like a disaster, it proved to be a "blessing in disguise" when she avoided a dangerous blizzard. What does this phrase mean?',
+    question: 'Choose the word OPPOSITE in meaning (ANTONYM) to CONCEAL:',
     options: [
-      'An apparent misfortune that unexpectedly leads to a favorable outcome',
-      'A religious ceremony performed during travel',
-      'A completely unforeseen financial penalty',
-      'A deceptive disguise worn for safety'
+      'Reveal / Disclose',
+      'Hide / Mask',
+      'Suppress / Bury',
+      'Protect / Shield'
     ],
     correctAnswerIndex: 0,
-    explanation: '"A blessing in disguise" is a seeming mishap that actually turns out to be beneficial.'
+    explanation: 'To "conceal" means to hide or keep secret; its direct antonym is to reveal or disclose.'
   },
   {
     id: 'vq-17',
@@ -211,22 +211,22 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-context-clues',
     difficulty: 'hard',
-    question: 'Sentence: "The arid conditions in the desert—where rainfall is almost non-existent—force plants to store water in thick stems." What clue defines "arid"?',
+    question: 'Choose the word OPPOSITE in meaning (ANTONYM) to ARID:',
     options: [
-      'The dash explaining "where rainfall is almost non-existent"',
-      'The word "plants"',
-      'The word "desert"',
-      'The word "water"'
+      'Humid / Fertile',
+      'Parched / Dry',
+      'Barren / Desolate',
+      'Scorched / Waterless'
     ],
     correctAnswerIndex: 0,
-    explanation: 'The explanatory clause between dashes provides a direct definition clue.'
+    explanation: '"Arid" means extremely dry and barren; its antonym is humid, moist, or fertile.'
   },
   {
     id: 'vq-21',
     topicId: 'vocabulary',
     lessonItemId: 'voc-formal-register',
     difficulty: 'medium',
-    question: 'Replace the informal phrase "a lot of": "The museum holds a _____ collection of Renaissance art."',
+    question: 'The museum holds a _____ collection of Renaissance art.',
     options: ['substantial', 'huge bunch of', 'heap of', 'pack of'],
     correctAnswerIndex: 0,
     explanation: '"Substantial" or "extensive" represents formal academic English.'
@@ -236,30 +236,30 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-synonyms-nuances',
     difficulty: 'medium',
-    question: 'While both words describe being careful with money, which word carries an ADMIRABLE and positive connotation?',
-    options: ['Frugal', 'Miserly', 'Stingy', 'Pinchpenny'],
+    question: 'Choose the word OPPOSITE in meaning (ANTONYM) to FRUGAL:',
+    options: ['Extravagant / Wasteful', 'Economical / Thrifty', 'Prudent / Cautious', 'Moderate / Restrained'],
     correctAnswerIndex: 0,
-    explanation: '"Frugal" is a positive virtue; miserly and stingy carry strong negative connotations.'
+    explanation: '"Frugal" describes being careful and economical with money; its antonym is extravagant or wasteful.'
   },
   {
     id: 'vq-23',
     topicId: 'vocabulary',
     lessonItemId: 'voc-word-roots',
     difficulty: 'easy',
-    question: 'The suffix "-tion" in words like "pollution", "reaction", and "dedication" indicates that the word is a:',
-    options: ['Noun', 'Verb', 'Adjective', 'Adverb'],
+    question: 'Choose the word closest in meaning (SYNONYM) to METICULOUS:',
+    options: ['Thorough / Careful', 'Careless / Sloppy', 'Hasty / Hurried', 'Superficial / Shallow'],
     correctAnswerIndex: 0,
-    explanation: 'The suffix "-tion" creates abstract and concrete nouns.'
+    explanation: '"Meticulous" means showing great attention to detail and thoroughness.'
   },
   {
     id: 'vq-24',
     topicId: 'vocabulary',
     lessonItemId: 'voc-idioms-context',
     difficulty: 'medium',
-    question: 'Despite numerous policy debates, the prime minister and the opposition leader rarely "see eye to eye." What does this mean?',
-    options: ['Agree with one another', 'Look at each other through glasses', 'Refuse to meet in public', 'Travel together'],
+    question: 'Choose the word closest in meaning (SYNONYM) to FEASIBLE:',
+    options: ['Practicable / Achievable', 'Impossible / Unattainable', 'Unreasonable / Ridiculous', 'Doubtful / Dubious'],
     correctAnswerIndex: 0,
-    explanation: '"To see eye to eye" means to share the same viewpoint or agree.'
+    explanation: '"Feasible" means capable of being done easily or conveniently.'
   },
   {
     id: 'vq-25',
@@ -296,20 +296,20 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-context-clues',
     difficulty: 'easy',
-    question: 'Sentence: "Her enthusiasm was contagious; soon, everyone in the study group was smiling and eager to contribute." What does "contagious" mean here?',
-    options: ['Easily spreading to others', 'Harmful and toxic', 'Extremely rare', 'Dangerous to breathe'],
+    question: 'Choose the word closest in meaning (SYNONYM) to DILIGENT:',
+    options: ['Hardworking / Conscientious', 'Lazy / Indolent', 'Careless / Negligent', 'Passive / Indifferent'],
     correctAnswerIndex: 0,
-    explanation: 'In this context, an emotion that quickly spreads to other people is described as contagious.'
+    explanation: '"Diligent" describes someone who shows persistent care and effort in work or study.'
   },
   {
     id: 'vq-29',
     topicId: 'vocabulary',
     lessonItemId: 'voc-word-roots',
     difficulty: 'medium',
-    question: 'The root "mal" means bad or abnormal. Which word describes severe poor nutrition caused by lack of proper food?',
-    options: ['Malnutrition', 'Benefaction', 'Chronicle', 'Contradiction'],
+    question: 'Choose the word OPPOSITE in meaning (ANTONYM) to HOSTILE:',
+    options: ['Amicable / Welcoming', 'Belligerent / Aggressive', 'Antagonistic / Threatening', 'Rival / Adversarial'],
     correctAnswerIndex: 0,
-    explanation: '"Malnutrition" is the condition caused by deficient, inadequate, or bad nutrition.'
+    explanation: '"Hostile" means showing enmity or aggression; its antonym is amicable, friendly, or welcoming.'
   },
   {
     id: 'vq-30',
@@ -326,8 +326,8 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-synonyms-nuances',
     difficulty: 'hard',
-    question: 'Unlike a merely difficult task, an _____ endeavor requires grueling, prolonged, exhausting labor over months or years.',
-    options: ['arduous', 'elementary', 'routine', 'spontaneous'],
+    question: 'Choose the word closest in meaning (SYNONYM) to ARDUOUS:',
+    options: ['Strenuous / Demanding', 'Effortless / Easy', 'Trivial / Minor', 'Spontaneous / Light'],
     correctAnswerIndex: 0,
     explanation: '"Arduous" specifically describes tasks requiring sustained, grueling effort and endurance.'
   },
@@ -336,15 +336,15 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-idioms-context',
     difficulty: 'easy',
-    question: 'She stayed up all night before the bar exam, "burning the midnight oil." What does this idiom mean?',
+    question: 'Choose the word OPPOSITE in meaning (ANTONYM) to CANDID:',
     options: [
-      'Studying or working late into the night',
-      'Conserving electricity by using oil lamps',
-      'Setting fire to old textbooks',
-      'Cooking dinner at midnight'
+      'Deceitful / Evasive',
+      'Frank / Honest',
+      'Sincere / Direct',
+      'Outspoken / Clear'
     ],
     correctAnswerIndex: 0,
-    explanation: '"Burn the midnight oil" means working or studying until very late at night.'
+    explanation: '"Candid" means truthful and straightforward; its direct antonym is deceitful, evasive, or guarded.'
   },
   {
     id: 'vq-33',
@@ -381,27 +381,27 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-word-roots',
     difficulty: 'hard',
-    question: 'The suffix "-ize" or "-ise" in words like "modernize" and "prioritize" functions to turn nouns/adjectives into:',
-    options: ['Verbs', 'Adverbs', 'Pronouns', 'Prepositions'],
+    question: 'Choose the word OPPOSITE in meaning (ANTONYM) to OBSOLETE:',
+    options: ['Contemporary / Modern', 'Outdated / Archaic', 'Ancient / Antique', 'Defunct / Disused'],
     correctAnswerIndex: 0,
-    explanation: 'The suffix "-ize" / "-ise" forms verbs indicating to make or become.'
+    explanation: '"Obsolete" means no longer produced or used; its direct antonym is contemporary or modern.'
   },
   {
     id: 'vq-37',
     topicId: 'vocabulary',
     lessonItemId: 'voc-context-clues',
     difficulty: 'medium',
-    question: 'Sentence: "The medicine alleviated her symptoms—reducing her fever, easing her cough, and soothing her throat." What does "alleviate" mean?',
-    options: ['To lessen or relieve', 'To worsen or intensify', 'To diagnose', 'To purchase at a pharmacy'],
+    question: 'Choose the word closest in meaning (SYNONYM) to ALLEVIATE:',
+    options: ['Relieve / Lessen', 'Intensify / Worsen', 'Aggravate / Provoke', 'Complicate / Hinder'],
     correctAnswerIndex: 0,
-    explanation: 'The examples (reducing fever, easing cough, soothing throat) provide an example clue: to relieve or lessen.'
+    explanation: '"Alleviate" means to make suffering or problems less severe; closest synonym is relieve or lessen.'
   },
   {
     id: 'vq-38',
     topicId: 'vocabulary',
     lessonItemId: 'voc-formal-register',
     difficulty: 'easy',
-    question: 'Replace the informal phrase "put off": "The dean decided to _____ the faculty vote until next semester."',
+    question: 'The dean decided to _____ the faculty vote until next semester.',
     options: ['postpone', 'ditch', 'throw away', 'skip over'],
     correctAnswerIndex: 0,
     explanation: '"Postpone" or "defer" is the formal register equivalent of "put off".'
@@ -411,10 +411,10 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-synonyms-nuances',
     difficulty: 'medium',
-    question: 'A person who pays obsessive, annoying attention to tiny, trivial academic rules is described as:',
-    options: ['pedantic', 'meticulous', 'creative', 'generous'],
+    question: 'Choose the word OPPOSITE in meaning (ANTONYM) to PLAUSIBLE:',
+    options: ['Implausible / Unbelievable', 'Credible / Feasible', 'Reasonable / Probable', 'Convincing / Sound'],
     correctAnswerIndex: 0,
-    explanation: '"Pedantic" carries the negative connotation of being excessively and annoyingly concerned with petty rules.'
+    explanation: '"Plausible" means seemingly reasonable or believable; its direct antonym is implausible or unbelievable.'
   },
   {
     id: 'vq-40',
@@ -431,15 +431,15 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-idioms-context',
     difficulty: 'easy',
-    question: 'Because the comet appears only every 76 years, observing it is a "once in a blue moon" event. What does this mean?',
+    question: 'Choose the word closest in meaning (SYNONYM) to PRAGMATIC:',
     options: [
-      'An event that happens extremely rarely',
-      'An event visible only during full moons',
-      'A nightly occurrence',
-      'An optical illusion'
+      'Practical / Realistic',
+      'Idealistic / Utopian',
+      'Theoretical / Abstract',
+      'Impractical / Visionary'
     ],
     correctAnswerIndex: 0,
-    explanation: '"Once in a blue moon" means something that occurs very rarely.'
+    explanation: '"Pragmatic" means dealing with problems in a sensible and practical way.'
   },
   {
     id: 'vq-42',
@@ -456,10 +456,10 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-word-roots',
     difficulty: 'easy',
-    question: 'The prefix "un-" in "unpredictable" and "unnecessary" means:',
-    options: ['Not or the opposite of', 'Very or extremely', 'Before in time', 'Together with'],
+    question: 'Choose the word closest in meaning (SYNONYM) to RESILIENT:',
+    options: ['Tough / Adaptable', 'Fragile / Delicate', 'Vulnerable / Weak', 'Rigid / Inflexible'],
     correctAnswerIndex: 0,
-    explanation: 'The prefix "un-" expresses negation or the reverse of the base word.'
+    explanation: '"Resilient" means able to withstand or recover quickly from difficult conditions.'
   },
   {
     id: 'vq-44',
@@ -476,7 +476,7 @@ export const VOCABULARY_EXAM_QUESTIONS: ExamQuestion[] = [
     topicId: 'vocabulary',
     lessonItemId: 'voc-formal-register',
     difficulty: 'medium',
-    question: 'Which option is free from informal conversational colloquialisms?',
+    question: 'Choose the option that uses appropriate FORMAL academic English without conversational colloquialisms:',
     options: [
       'The data demonstrates a substantial decrease in atmospheric pollutants.',
       'The data shows a pretty big drop in dirty air stuff.',

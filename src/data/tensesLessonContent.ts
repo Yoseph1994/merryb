@@ -92,10 +92,10 @@ export const TENSES_LESSON_ITEMS: LessonItem[] = [
       {
         id: 't01-p3',
         type: 'fill_gap',
-        prompt: 'Which aspect describes an action that is currently in progress?',
-        options: ['Continuous', 'Simple', 'Passive', 'Past'],
-        correctAnswer: 'Continuous',
-        explanation: 'Continuous tenses (ending in -ing) show actions in the middle of happening.'
+        prompt: 'Look outside! The athletes _______ across the sports field right now.',
+        options: ['are running', 'ran', 'run', 'have run'],
+        correctAnswer: 'are running',
+        explanation: '"Right now" and "Look!" indicate an action in progress, requiring Present Continuous ("are running").'
       },
       {
         id: 't01-p4',
@@ -111,18 +111,18 @@ export const TENSES_LESSON_ITEMS: LessonItem[] = [
       {
         id: 't01-r1',
         type: 'multiple_choice',
-        prompt: 'In "The library opens at 08:00 every weekday", what does the clue "every weekday" signal?',
-        options: ['A continuous action', 'A regular routine (Present Simple)', 'A finished past event', 'A future intention'],
-        correctAnswer: 1,
-        explanation: '"Every weekday" indicates a regular schedule or repeated habit, requiring Present Simple.'
+        prompt: 'The campus library _______ at 08:00 every weekday morning.',
+        options: ['opens', 'is opening', 'has opened', 'opened'],
+        correctAnswer: 0,
+        explanation: 'Scheduled timetables and repeating daily habits take the Present Simple ("opens").'
       },
       {
         id: 't01-r2',
         type: 'sentence_builder',
-        prompt: 'Arrange the steps in the 3-Step Tense Method:',
-        jumbledWords: ['time', 'clue', 'Find', 'the', 'first'],
-        correctSentenceWords: ['Find', 'the', 'time', 'clue', 'first'],
-        explanation: 'Step 1 is always finding the time clue in the sentence.'
+        prompt: 'Assemble the sentence with the past time marker:',
+        jumbledWords: ['yesterday.', 'published', 'findings', 'scientists', 'their', 'The'],
+        correctSentenceWords: ['The', 'scientists', 'published', 'their', 'findings', 'yesterday.'],
+        explanation: 'Specified past time ("yesterday") pairs with the Past Simple ("published").'
       },
       {
         id: 't01-r3',
@@ -138,10 +138,10 @@ export const TENSES_LESSON_ITEMS: LessonItem[] = [
       {
         id: 't01-r4',
         type: 'fill_gap',
-        prompt: 'An action completed before another point in time uses which aspect?',
-        options: ['Perfect', 'Continuous', 'Simple', 'Imperative'],
-        correctAnswer: 'Perfect',
-        explanation: 'Perfect tenses (have/had/will have done) link an action to an earlier point in time.'
+        prompt: 'By the time the fire brigade arrived, the security guards _______ the building.',
+        options: ['had already evacuated', 'have already evacuated', 'evacuate', 'are evacuating'],
+        correctAnswer: 'had already evacuated',
+        explanation: 'An action completed before another past event requires the Past Perfect ("had already evacuated").'
       }
     ]
   },

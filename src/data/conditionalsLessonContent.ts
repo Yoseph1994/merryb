@@ -72,10 +72,10 @@ export const CONDITIONALS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'cond-bp-p2',
         type: 'fill_gap',
-        prompt: 'A conditional sentence combines a condition with its _____ .',
-        options: ['result', 'adverb', 'passive form', 'subject pronoun'],
+        prompt: 'If the laboratory receives the shipment today, they _____ testing immediately.',
+        options: ['will begin', 'began', 'would begin', 'had begun'],
         correctAnswer: 0,
-        explanation: 'A conditional sentence links a condition (if-clause) directly to its result (main clause).'
+        explanation: 'First Conditional: Present Simple in the if-clause pairs with "will + base verb" in the result.'
       },
       {
         id: 'cond-bp-p3',
@@ -89,29 +89,29 @@ export const CONDITIONALS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'cond-bp-p4',
         type: 'match_pairs',
-        prompt: 'Match each conditional tier to its real meaning:',
+        prompt: 'Match each condition to its logical result:',
         pairs: [
-          { left: 'Zero Conditional', right: 'Scientific fact or rule' },
-          { left: 'First Conditional', right: 'Likely future outcome' },
-          { left: 'Second Conditional', right: 'Imaginary present dream' },
-          { left: 'Third Conditional', right: 'Impossible past regret' }
+          { left: 'If you heat ice above 0°C', right: 'it turns into liquid water.' },
+          { left: 'If she leaves right now', right: 'she will catch the morning train.' },
+          { left: 'If I won the grand prize', right: 'I would travel around the world.' },
+          { left: 'If we had booked earlier', right: 'we would have secured front-row seats.' }
         ],
-        explanation: 'Each conditional structure corresponds strictly to certainty and time reality.'
+        explanation: 'Clause matching trains you to pair verb forms accurately across all conditional patterns.'
       }
     ],
     retryPractice: [
       {
         id: 'cond-bp-r1',
         type: 'multiple_choice',
-        prompt: 'What happens if the main clause comes first?',
+        prompt: 'We will proceed with the outdoor ceremony _____ the rain stops by noon.',
         options: [
-          'A semicolon is required',
-          'No comma is used before if',
-          'A comma is always required',
-          'The verb tense must change'
+          'if',
+          'unless',
+          'despite',
+          'because of'
         ],
-        correctAnswer: 1,
-        explanation: 'When the main result begins the sentence, no comma precedes the if-clause.'
+        correctAnswer: 0,
+        explanation: '"If" correctly introduces the conditional clause without requiring a comma when the result clause precedes it.'
       },
       {
         id: 'cond-bp-r2',
@@ -259,23 +259,23 @@ export const CONDITIONALS_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'cond-z-r3',
         type: 'bucket_sort',
-        prompt: 'Sort sentences by conditional type:',
-        buckets: ['Zero Conditional (Fact)', 'First Conditional (Prediction)'],
+        prompt: 'Sort sentences into Grammatically Correct vs Contains Grammar Error:',
+        buckets: ['Grammatically Correct', 'Contains Grammar Error'],
         itemsToSort: [
           { text: 'If you heat water to 100°C, it boils.', correctBucketIndex: 0 },
-          { text: 'If it rains tomorrow, we will take a taxi.', correctBucketIndex: 1 },
-          { text: 'When the sun sets, darkness falls.', correctBucketIndex: 0 },
-          { text: 'If she studies hard, she will succeed.', correctBucketIndex: 1 }
+          { text: 'If it will rain tomorrow, we stay home.', correctBucketIndex: 1 },
+          { text: 'When water freezes, it expands.', correctBucketIndex: 0 },
+          { text: 'If she leaves early, she would catch the bus.', correctBucketIndex: 1 }
         ],
-        explanation: 'Zero conditional is for invariable facts; First is for specific future predictions.'
+        explanation: 'Never use "will" in the if-clause; Zero Conditional pairs Present Simple with Present Simple.'
       },
       {
         id: 'cond-z-r4',
         type: 'multiple_choice',
-        prompt: 'In Zero Conditional sentences, the word "if" can be safely replaced by:',
-        options: ['when', 'unless', 'would', 'had'],
+        prompt: '_____ water reaches 100°C under normal atmospheric pressure, it boils.',
+        options: ['When', 'Unless', 'Although', 'Despite'],
         correctAnswer: 0,
-        explanation: 'Because the result is guaranteed every time, "when" means the exact same thing as "if".'
+        explanation: '"When" or "If" correctly introduces invariable scientific facts in the Zero Conditional.'
       }
     ],
     rememberCard: {

@@ -55,23 +55,23 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-wr-p1',
         type: 'multiple_choice',
-        prompt: 'The root "dict" means "to speak". What does the word "contradict" mean?',
+        prompt: 'Choose the word OPPOSITE in meaning (ANTONYM) to CONFIRM:',
         options: [
-          'To speak against or state the opposite',
-          'To speak loudly in public',
-          'To repeat words silently',
-          'To translate into ancient Greek'
+          'Contradict',
+          'Verify',
+          'Endorse',
+          'Support'
         ],
         correctAnswer: 0,
-        explanation: 'The prefix "contra" (against) + "dict" (speak) means to speak against or deny.'
+        explanation: '"Contradict" means to assert the opposite or deny, making it the antonym of confirm.'
       },
       {
         id: 'voc-wr-p2',
         type: 'fill_gap',
-        prompt: 'Adding the suffix "-ify" transforms the adjective "clear" into the verb _____ .',
+        prompt: 'The government spokesperson held a briefing to _____ the new tax regulations.',
         options: ['clarify', 'clarity', 'clearly', 'clarification'],
         correctAnswer: 0,
-        explanation: '"Clarify" is the verb form meaning to make clear.'
+        explanation: 'Following the infinitive marker "to", use the base verb "clarify".'
       },
       {
         id: 'voc-wr-p3',
@@ -85,24 +85,24 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-wr-p4',
         type: 'match_pairs',
-        prompt: 'Match root to its core meaning:',
+        prompt: 'Match each word to its closest SYNONYM:',
         pairs: [
-          { left: 'bene / bon', right: 'good or well' },
-          { left: 'chron', right: 'time' },
-          { left: 'struct', right: 'to build' },
-          { left: 'mal', right: 'bad or evil' }
+          { left: 'Beneficial', right: 'Advantageous / Helpful' },
+          { left: 'Chronological', right: 'Sequential in time' },
+          { left: 'Constructive', right: 'Productive / Useful' },
+          { left: 'Malicious', right: 'Spiteful / Harmful' }
         ],
-        explanation: 'Recognizing root families unlocks thousands of unknown exam words instantly.'
+        explanation: 'Recognizing root families and their synonyms expands reading comprehension on exams.'
       }
     ],
     retryPractice: [
       {
         id: 'voc-wr-r1',
         type: 'multiple_choice',
-        prompt: 'The prefix "mal-" means "bad". Which word describes a machine that operates incorrectly?',
-        options: ['Malfunction', 'Benefactor', 'Chronology', 'Contradiction'],
+        prompt: 'Engineers investigated why the backup generator began to _____ during the blackout.',
+        options: ['malfunction', 'benefactor', 'chronology', 'contradiction'],
         correctAnswer: 0,
-        explanation: '"Malfunction" means to fail to function properly.'
+        explanation: '"Malfunction" is the verb meaning to fail to operate properly.'
       },
       {
         id: 'voc-wr-r2',
@@ -115,15 +115,15 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-wr-r3',
         type: 'bucket_sort',
-        prompt: 'Sort words by part of speech using their suffix clues:',
-        buckets: ['Nouns (-tion / -ity / -ment)', 'Adjectives (-ive / -ous / -able)'],
+        prompt: 'Sort words into SYNONYMS vs ANTONYMS of "BENEFICIAL":',
+        buckets: ['SYNONYMS (Helpful)', 'ANTONYMS (Harmful)'],
         itemsToSort: [
-          { text: 'Innovation / Prosperity', correctBucketIndex: 0 },
-          { text: 'Effective / Hazardous', correctBucketIndex: 1 },
-          { text: 'Development / Clarity', correctBucketIndex: 0 },
-          { text: 'Remarkable / Decisive', correctBucketIndex: 1 }
+          { text: 'Advantageous / Constructive', correctBucketIndex: 0 },
+          { text: 'Detrimental / Hazardous', correctBucketIndex: 1 },
+          { text: 'Favorable / Productive', correctBucketIndex: 0 },
+          { text: 'Destructive / Harmful', correctBucketIndex: 1 }
         ],
-        explanation: '-tion and -ment create nouns; -ive and -able create adjectives.'
+        explanation: 'Advantageous and constructive mean helpful; detrimental and hazardous mean harmful.'
       },
       {
         id: 'voc-wr-r4',
@@ -198,78 +198,78 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-cc-p1',
         type: 'multiple_choice',
-        prompt: 'Sentence: "Unlike her exuberant and outgoing sister, Elena was remarkably reserved." What does "exuberant" mean?',
+        prompt: 'Choose the word closest in meaning (SYNONYM) to EXUBERANT:',
         options: ['Full of cheerful, high energy', 'Silent and depressed', 'Extremely wealthy', 'Physically frail'],
         correctAnswer: 0,
-        explanation: 'The contrast word "Unlike" shows that "exuberant" is the opposite of "reserved" (quiet).'
+        explanation: '"Exuberant" means filled with cheerful energy, vitality, and high spirits.'
       },
       {
         id: 'voc-cc-p2',
         type: 'fill_gap',
-        prompt: 'The patient suffered from acute pain—pain that was sudden, severe, and sharp. The dashes provide a _____ clue.',
-        options: ['definition', 'conjunction', 'punctuation', 'negative'],
+        prompt: 'Choose the word closest in meaning (SYNONYM) to ACUTE: "The patient suffered from acute chest pain."',
+        options: ['severe', 'mild', 'chronic', 'harmless'],
         correctAnswer: 0,
-        explanation: 'Dashes and commas that state the meaning right away provide a definition/restatement clue.'
+        explanation: '"Acute" describes intense, severe pain or a sharp crisis.'
       },
       {
         id: 'voc-cc-p3',
         type: 'tap_wrong_word',
-        prompt: 'Tap the signal word indicating that the two traits are opposites:',
-        words: ['Although', 'Mark', 'was', 'thrifty,', 'his', 'brother', 'spent', 'recklessly.'],
-        wrongWordIndex: 0,
-        correction: 'Although (signal)',
-        explanation: '"Although" signals a contrast clue that reveals "thrifty" means careful with money (opposite of reckless).'
+        prompt: 'Tap the word that breaks the contrast between frugal and wasteful:',
+        words: ['Although', 'Mark', 'was', 'thrifty,', 'his', 'brother', 'spent', 'carefully.'],
+        wrongWordIndex: 7,
+        correction: 'recklessly',
+        explanation: 'To maintain the contrast signaled by "Although", the brother must spend recklessly, not carefully.'
       },
       {
         id: 'voc-cc-p4',
         type: 'match_pairs',
-        prompt: 'Match clue type to its identifying marker:',
+        prompt: 'Match each word to its direct ANTONYM (Opposite):',
         pairs: [
-          { left: 'Contrast Clue', right: 'unlike, however, on the other hand' },
-          { left: 'Example Clue', right: 'such as, for instance, including' },
-          { left: 'Definition Clue', right: 'that is, in other words, dashes (—)' },
-          { left: 'Cause Clue', right: 'because, since, as a result of' }
+          { left: 'Thrifty (Frugal)', right: 'Wasteful / Extravagant' },
+          { left: 'Taciturn (Quiet)', right: 'Talkative / Verbose' },
+          { left: 'Arid (Dry)', right: 'Humid / Fertile' },
+          { left: 'Exuberant (Lively)', right: 'Depressed / Subdued' }
         ],
-        explanation: 'Identifying the signal words directs you to the exact method for deducing the definition.'
+        explanation: 'Antonym matching builds essential entrance exam vocabulary recognition.'
       }
     ],
     retryPractice: [
       {
         id: 'voc-cc-r1',
         type: 'multiple_choice',
-        prompt: 'Read: "Arboreal creatures, such as monkeys, squirrels, and tree frogs, spend most of their lives in branches." What does "arboreal" mean?',
+        prompt: 'In the sentence "Arboreal creatures like squirrels nest high in branches", the word ARBOREAL means:',
         options: ['Living in trees', 'Living underwater', 'Flying in clouds', 'Active underground'],
         correctAnswer: 0,
-        explanation: 'The examples (monkeys, squirrels, tree frogs in branches) provide an example clue: living in trees.'
+        explanation: '"Arboreal" refers to animals that live in or among trees.'
       },
       {
         id: 'voc-cc-r2',
         type: 'fill_gap',
-        prompt: 'When a sentence uses "whereas" or "in contrast", the unknown word is the _____ of the known word.',
-        options: ['opposite', 'synonym', 'spelling', 'pronunciation'],
+        prompt: 'Choose the word OPPOSITE in meaning (ANTONYM) to TACITURN:',
+        options: ['talkative', 'silent', 'reserved', 'hesitant'],
         correctAnswer: 0,
-        explanation: 'Contrast linkers reveal an antonym or opposite meaning.'
+        explanation: '"Taciturn" means untalkative and reserved; its antonym is talkative or verbose.'
       },
       {
         id: 'voc-cc-r3',
         type: 'bucket_sort',
-        prompt: 'Sort signal words by clue type:',
-        buckets: ['Contrast Clues (Opposite)', 'Example Clues (Category)'],
+        prompt: 'Sort words into SYNONYMS vs ANTONYMS of "ABUNDANT":',
+        buckets: ['SYNONYMS (Plentiful)', 'ANTONYMS (Scarce)'],
         itemsToSort: [
-          { text: 'Unlike / In contrast to', correctBucketIndex: 0 },
-          { text: 'Such as / For instance', correctBucketIndex: 1 },
-          { text: 'Whereas / On the contrary', correctBucketIndex: 0 },
-          { text: 'For example / Including', correctBucketIndex: 1 }
+          { text: 'Plentiful / Copious', correctBucketIndex: 0 },
+          { text: 'Scarce / Meager', correctBucketIndex: 1 },
+          { text: 'Bountiful / Ample', correctBucketIndex: 0 },
+          { text: 'Deficient / Sparse', correctBucketIndex: 1 }
         ],
-        explanation: 'Contrast markers provide opposites; example markers supply specific category members.'
+        explanation: 'Copious and ample mean plentiful; scarce and meager mean lacking.'
       },
       {
         id: 'voc-cc-r4',
         type: 'multiple_choice',
-        prompt: 'Sentence: "The arid climate caused crops to wither from lack of rain." What does "arid" mean?',
-        options: ['Extremely dry', 'Very cold', 'Lush and humid', 'Crowded'],
+        prompt: 'Choose the word closest in meaning (SYNONYM) to ARID:',
+        options: ['Dry and parched', 'Very cold', 'Lush and humid', 'Crowded'],
         correctAnswer: 0,
-        explanation: '"Lack of rain" and "wither" provide inference clues establishing that "arid" means dry.'
+        explanation: '"Arid" means dry and parched without sufficient moisture.'
       }
     ],
     rememberCard: {
@@ -640,14 +640,14 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-cw-p4',
         type: 'match_pairs',
-        prompt: 'Match word to its correct grammatical identity:',
+        prompt: 'Match each confused word to its correct sentence context:',
         pairs: [
-          { left: 'Advice', right: 'Noun (guidance offered)' },
-          { left: 'Advise', right: 'Verb (to give guidance)' },
-          { left: 'Loose', right: 'Adjective (not tight)' },
-          { left: 'Lose', right: 'Verb (to misplace)' }
+          { left: 'Advice', right: 'She asked her mentor for helpful _____ .' },
+          { left: 'Advise', right: 'I strongly _____ you to apply early.' },
+          { left: 'Loose', right: 'The strap on the camera was _____ .' },
+          { left: 'Lose', right: 'Do not _____ your boarding pass.' }
         ],
-        explanation: 'Distinguishing parts of speech prevents careless spelling mistakes on exams.'
+        explanation: 'Advice is a noun; advise is a verb; loose means not tight; lose means misplace.'
       }
     ],
     retryPractice: [
@@ -670,15 +670,15 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-cw-r3',
         type: 'bucket_sort',
-        prompt: 'Sort words by part of speech:',
-        buckets: ['Nouns', 'Verbs'],
+        prompt: 'Sort into SYNONYMS vs ANTONYMS of "EXPAND":',
+        buckets: ['SYNONYMS of Expand', 'ANTONYMS of Expand'],
         itemsToSort: [
-          { text: 'Effect / Advice', correctBucketIndex: 0 },
-          { text: 'Affect / Advise', correctBucketIndex: 1 },
-          { text: 'Principle / Loss', correctBucketIndex: 0 },
-          { text: 'Lose / Compliment (action)', correctBucketIndex: 1 }
+          { text: 'Broaden / Enlarge', correctBucketIndex: 0 },
+          { text: 'Shrink / Contract', correctBucketIndex: 1 },
+          { text: 'Amplify / Extend', correctBucketIndex: 0 },
+          { text: 'Diminish / Compress', correctBucketIndex: 1 }
         ],
-        explanation: 'Effect and advice are nouns; affect and advise are verbs.'
+        explanation: 'Broaden and amplify mean expand; shrink and diminish mean reduce.'
       },
       {
         id: 'voc-cw-r4',
@@ -943,10 +943,10 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-sn-r1',
         type: 'multiple_choice',
-        prompt: 'Which word has a POSITIVE connotation when describing someone who carefully watches their spending?',
-        options: ['Thrifty', 'Miserly', 'Stingy', 'Cheap'],
+        prompt: 'Choose the word OPPOSITE in meaning (ANTONYM) to FRUGAL:',
+        options: ['Extravagant / Wasteful', 'Thrifty / Economical', 'Prudent / Cautious', 'Moderate / Reasonable'],
         correctAnswer: 0,
-        explanation: '"Thrifty" praises careful budgeting, while miserly and stingy are critical and negative.'
+        explanation: '"Frugal" means smartly careful with money; its direct antonym is extravagant or wasteful.'
       },
       {
         id: 'voc-sn-r2',
@@ -959,15 +959,15 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-sn-r3',
         type: 'bucket_sort',
-        prompt: 'Sort words by positive vs negative connotation:',
-        buckets: ['Positive Connotation', 'Negative Connotation'],
+        prompt: 'Sort words into SYNONYMS vs ANTONYMS of "METICULOUS":',
+        buckets: ['SYNONYMS (Careful)', 'ANTONYMS (Sloppy)'],
         itemsToSort: [
-          { text: 'Renowned / Courageous', correctBucketIndex: 0 },
-          { text: 'Notorious / Reckless', correctBucketIndex: 1 },
-          { text: 'Meticulous / Frugal', correctBucketIndex: 0 },
-          { text: 'Pedantic / Stingy', correctBucketIndex: 1 }
+          { text: 'Thorough / Rigorous', correctBucketIndex: 0 },
+          { text: 'Careless / Negligent', correctBucketIndex: 1 },
+          { text: 'Scrupulous / Detailed', correctBucketIndex: 0 },
+          { text: 'Hasty / Sloppy', correctBucketIndex: 1 }
         ],
-        explanation: 'Connotations reflect the attitude and tone associated with each word.'
+        explanation: 'Thorough and scrupulous mean meticulous; careless and sloppy are antonyms.'
       },
       {
         id: 'voc-sn-r4',
@@ -1066,11 +1066,11 @@ export const VOCABULARY_LESSON_ITEMS: LessonItem[] = [
       {
         id: 'voc-id-p3',
         type: 'tap_wrong_word',
-        prompt: 'Tap the literal distractor in this explanation:',
-        words: ['Breaking', 'the', 'ice', 'means', 'shattering', 'frozen', 'water', 'on', 'a', 'lake.'],
-        wrongWordIndex: 4,
-        correction: 'easing social tension',
-        explanation: 'Idioms are figurative; "break the ice" means to ease social awkwardness, not freeze water.'
+        prompt: 'Tap the incorrect word in this common idiom:',
+        words: ['Before', 'the', 'meeting,', 'she', 'told', 'a', 'joke', 'to', 'melt', 'the', 'ice.'],
+        wrongWordIndex: 8,
+        correction: 'break',
+        explanation: 'The established idiom is "break the ice", not "melt the ice".'
       },
       {
         id: 'voc-id-p4',
