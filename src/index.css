@@ -136,6 +136,7 @@ body {
 .app-layout {
   display: flex;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Desktop Side Rail */
@@ -166,7 +167,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: var(--space-4);
-  padding-bottom: calc(var(--nav-height-mobile) + var(--space-6));
+  padding-bottom: calc(var(--nav-height-mobile) + env(safe-area-inset-bottom, 0px) + var(--space-6));
   width: 100%;
 }
 
@@ -189,6 +190,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-3) 0;
+  padding-top: max(var(--space-3), env(safe-area-inset-top, 0px));
   margin-bottom: var(--space-4);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -196,7 +198,7 @@ body {
 .header-brand {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
 }
 
 .brand-title {
@@ -207,12 +209,18 @@ body {
 }
 
 .brand-badge {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   padding: 2px 8px;
   border-radius: var(--radius-full);
   background: var(--accent-subtle);
   color: var(--accent-primary);
+}
+
+@media (max-width: 480px) {
+  .brand-badge {
+    display: none;
+  }
 }
 
 .header-actions {
@@ -227,15 +235,18 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: var(--nav-height-mobile);
+  height: calc(var(--nav-height-mobile) + env(safe-area-inset-bottom, 0px));
   background: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   padding: var(--space-2) var(--space-4);
+  padding-bottom: max(var(--space-2), env(safe-area-inset-bottom, 0px));
   z-index: 50;
-  box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 @media (min-width: 900px) {
@@ -514,5 +525,134 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================================
+   Mobile UI/UX & Reading Optimization (Smartphones <= 640px)
+   ======================================================== */
+.explanation-card,
+.exercise-card,
+.exam-card {
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.visual-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.visual-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.visual-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  -webkit-overflow-scrolling: touch;
+}
+
+.step-nav-footer,
+.exercise-action-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  /* Generous, effortless mobile reading typography */
+  body {
+    font-size: 16.5px;
+    line-height: 1.62;
+  }
+
+  .main-viewport {
+    padding: 12px 14px;
+    padding-bottom: calc(var(--nav-height-mobile) + env(safe-area-inset-bottom, 0px) + 24px);
+  }
+
+  .card {
+    padding: 18px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .explanation-card,
+  .exercise-card,
+  .exam-card {
+    padding: 20px 16px;
+    margin-bottom: 16px;
+  }
+
+  /* Single-column stacking for comparison visual on phones */
+  .visual-comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .visual-chips-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Mobile touch buttons and options */
+  .exercise-option-btn {
+    min-height: 56px;
+    padding: 14px 16px;
+    font-size: 1.02rem;
+    line-height: 1.45;
+  }
+
+  .btn {
+    min-height: 50px;
+    padding: 13px 18px;
+    font-size: 1rem;
+  }
+
+  .step-nav-footer .btn,
+  .exercise-action-footer .btn {
+    flex: 1;
+  }
+
+  /* Headings on mobile */
+  h1 {
+    font-size: 1.55rem !important;
+    line-height: 1.25 !important;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.32 !important;
+  }
+
+  h3 {
+    font-size: 1.15rem !important;
+    line-height: 1.38 !important;
+  }
+
+  /* Prevent overflow */
+  p, h1, h2, h3, h4, span {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .continue-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  .continue-card .btn {
+    width: 100%;
+  }
+
+  .lesson-item-card {
+    padding: 14px 14px !important;
+    gap: 10px !important;
   }
 }

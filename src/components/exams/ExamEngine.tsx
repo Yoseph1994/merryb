@@ -144,9 +144,9 @@ export const ExamEngine: React.FC<Props> = ({
       </div>
 
       {/* Question Card */}
-      <div className="card" style={{ padding: '28px', marginBottom: '20px' }}>
+      <div className="card exam-card">
         {/* DO NOT show any topic hints or tense labels here as per instructions */}
-        <h3 style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-main)', lineHeight: 1.6, marginBottom: '24px' }}>
+        <h3 style={{ fontSize: '1.24rem', fontWeight: 600, color: 'var(--text-main)', lineHeight: 1.6, marginBottom: '24px' }}>
           {q.question}
         </h3>
 
@@ -173,21 +173,21 @@ export const ExamEngine: React.FC<Props> = ({
               >
                 <span
                   style={{
-                    width: '30px',
-                    height: '30px',
+                    width: '32px',
+                    height: '32px',
                     borderRadius: 'var(--radius-sm)',
                     background: 'var(--border-subtle)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontWeight: 700,
-                    fontSize: '0.85rem',
+                    fontSize: '0.88rem',
                     flexShrink: 0
                   }}
                 >
                   {String.fromCharCode(65 + sIdx)}
                 </span>
-                <span style={{ flex: 1, fontSize: '0.98rem' }}>{opt.text}</span>
+                <span style={{ flex: 1, fontSize: '1.02rem', lineHeight: 1.45 }}>{opt.text}</span>
               </button>
             );
           })}
@@ -214,12 +214,12 @@ export const ExamEngine: React.FC<Props> = ({
             )}
 
             <div style={{ flex: 1 }}>
-              <div style={{ fontWeight: 700, fontSize: '0.95rem', color: isUserCorrect ? 'var(--color-success-text)' : 'var(--color-error-text)', marginBottom: '4px' }}>
+              <div style={{ fontWeight: 700, fontSize: '0.98rem', color: isUserCorrect ? 'var(--color-success-text)' : 'var(--color-error-text)', marginBottom: '4px' }}>
                 {isUserCorrect
                   ? 'Correct!'
                   : `Not quite. Correct answer: ${String.fromCharCode(65 + correctShuffledIndex)}. ${currentItem.shuffledOptions[correctShuffledIndex].text}`}
               </div>
-              <div style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
+              <div style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
                 {q.explanation}
               </div>
             </div>
@@ -229,7 +229,7 @@ export const ExamEngine: React.FC<Props> = ({
         {/* Next Button */}
         {isAnswered && (
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <button className="btn btn-primary" onClick={handleNext}>
+            <button className="btn btn-primary" onClick={handleNext} style={{ width: '100%', maxWidth: '280px' }}>
               {isLast ? 'View Exam Results' : 'Next Question'} <ArrowRight size={16} />
             </button>
           </div>

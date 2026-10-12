@@ -83,14 +83,13 @@ export const TopicDetailView: React.FC<Props> = ({
           return (
             <div
               key={item.id}
-              className="card card-interactive"
+              className="card card-interactive lesson-item-card"
               onClick={() => onSelectLesson(item)}
               style={{
-                padding: '18px 20px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                gap: '16px'
+                gap: '14px'
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flex: 1 }}>

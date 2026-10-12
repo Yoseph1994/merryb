@@ -21,7 +21,7 @@ export const ExplanationStepView: React.FC<Props> = ({
   const visual = step.visual;
 
   return (
-    <div className="card" style={{ padding: '28px', marginBottom: '20px' }}>
+    <div className="card explanation-card">
       {/* Step counter */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
         <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -37,7 +37,7 @@ export const ExplanationStepView: React.FC<Props> = ({
       )}
 
       {/* Explanation Text (Short, Simple, max ~40 words) */}
-      <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '24px' }}>
+      <p style={{ fontSize: '1.08rem', color: 'var(--text-secondary)', lineHeight: 1.65, marginBottom: '24px' }}>
         {step.text}
       </p>
 
@@ -53,7 +53,7 @@ export const ExplanationStepView: React.FC<Props> = ({
                 justifyContent: 'center',
                 flexWrap: 'wrap',
                 gap: '8px',
-                padding: '18px',
+                padding: '18px 14px',
                 background: 'var(--bg-surface-subtle)',
                 borderRadius: 'var(--radius-md)',
                 fontSize: '1rem',
@@ -86,7 +86,7 @@ export const ExplanationStepView: React.FC<Props> = ({
                     style={{
                       background: badgeBg,
                       color: textColor,
-                      padding: tok.highlight ? '4px 10px' : '0 2px',
+                      padding: tok.highlight ? '5px 12px' : '0 2px',
                       borderRadius: tok.highlight ? 'var(--radius-sm)' : '0'
                     }}
                   >
@@ -126,7 +126,7 @@ export const ExplanationStepView: React.FC<Props> = ({
                     <div style={{ fontWeight: 700, fontSize: '0.85rem', color: borderCol, textTransform: 'uppercase' }}>
                       {item.label}
                     </div>
-                    <div style={{ color: 'var(--text-main)', fontSize: '0.95rem', fontWeight: 500 }}>
+                    <div style={{ color: 'var(--text-main)', fontSize: '0.98rem', fontWeight: 500 }}>
                       {item.value}
                     </div>
                   </div>
@@ -137,7 +137,7 @@ export const ExplanationStepView: React.FC<Props> = ({
 
           {/* 3. Chips Visual */}
           {visual.type === 'chips' && visual.items && (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '10px' }}>
+            <div className="visual-chips-grid">
               {visual.items.map((chip, idx) => (
                 <div
                   key={idx}
@@ -145,14 +145,14 @@ export const ExplanationStepView: React.FC<Props> = ({
                     background: 'var(--bg-surface-subtle)',
                     border: '1px solid var(--border-subtle)',
                     borderRadius: 'var(--radius-md)',
-                    padding: '12px 14px'
+                    padding: '14px 16px'
                   }}
                 >
                   <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--accent-primary)', textTransform: 'uppercase', marginBottom: '2px' }}>
                     {chip.label}
                   </div>
                   {chip.value && (
-                    <div style={{ fontSize: '0.92rem', color: 'var(--text-main)', fontWeight: 500 }}>
+                    <div style={{ fontSize: '0.95rem', color: 'var(--text-main)', fontWeight: 500 }}>
                       {chip.value}
                     </div>
                   )}
@@ -163,20 +163,20 @@ export const ExplanationStepView: React.FC<Props> = ({
 
           {/* 4. Comparison Visual */}
           {visual.type === 'comparison' && (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+            <div className="visual-comparison-grid">
               {visual.leftSide && (
                 <div
                   style={{
-                    padding: '14px',
+                    padding: '16px',
                     borderRadius: 'var(--radius-md)',
                     background: 'var(--bg-surface-subtle)',
                     border: '1px solid var(--border-subtle)'
                   }}
                 >
-                  <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '4px' }}>
+                  <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '6px' }}>
                     {visual.leftSide.label}
                   </div>
-                  <div style={{ fontSize: '0.92rem', color: 'var(--text-main)' }}>
+                  <div style={{ fontSize: '0.98rem', color: 'var(--text-main)', lineHeight: 1.5 }}>
                     {visual.leftSide.text}
                   </div>
                 </div>
@@ -184,16 +184,16 @@ export const ExplanationStepView: React.FC<Props> = ({
               {visual.rightSide && (
                 <div
                   style={{
-                    padding: '14px',
+                    padding: '16px',
                     borderRadius: 'var(--radius-md)',
                     background: 'var(--accent-subtle)',
                     border: '1px solid rgba(79, 70, 229, 0.25)'
                   }}
                 >
-                  <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--accent-primary)', textTransform: 'uppercase', marginBottom: '4px' }}>
+                  <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--accent-primary)', textTransform: 'uppercase', marginBottom: '6px' }}>
                     {visual.rightSide.label}
                   </div>
-                  <div style={{ fontSize: '0.92rem', color: 'var(--text-main)', fontWeight: 500 }}>
+                  <div style={{ fontSize: '0.98rem', color: 'var(--text-main)', fontWeight: 500, lineHeight: 1.5 }}>
                     {visual.rightSide.text}
                   </div>
                 </div>
@@ -203,12 +203,12 @@ export const ExplanationStepView: React.FC<Props> = ({
 
           {/* 5. Table Visual */}
           {visual.type === 'table' && visual.headers && visual.rows && (
-            <div style={{ overflowX: 'auto', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
+            <div className="visual-table-wrapper">
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
                 <thead>
                   <tr style={{ background: 'var(--bg-surface-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
                     {visual.headers.map((h, i) => (
-                      <th key={i} style={{ padding: '8px 12px', textAlign: 'left', fontWeight: 700, color: 'var(--text-secondary)' }}>
+                      <th key={i} style={{ padding: '10px 14px', textAlign: 'left', fontWeight: 700, color: 'var(--text-secondary)' }}>
                         {h}
                       </th>
                     ))}
@@ -218,7 +218,7 @@ export const ExplanationStepView: React.FC<Props> = ({
                   {visual.rows.map((row, rIdx) => (
                     <tr key={rIdx} style={{ borderBottom: rIdx < visual.rows!.length - 1 ? '1px solid var(--border-subtle)' : 'none' }}>
                       {row.map((cell, cIdx) => (
-                        <td key={cIdx} style={{ padding: '8px 12px', color: 'var(--text-main)' }}>
+                        <td key={cIdx} style={{ padding: '10px 14px', color: 'var(--text-main)' }}>
                           {cell}
                         </td>
                       ))}
@@ -232,7 +232,7 @@ export const ExplanationStepView: React.FC<Props> = ({
       )}
 
       {/* Navigation Buttons */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="step-nav-footer">
         {canPrev ? (
           <button className="btn btn-secondary" onClick={onPrev}>
             Back

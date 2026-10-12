@@ -69,9 +69,9 @@ export const HomeView: React.FC<Props> = ({
       {/* "Continue where you left off" Card */}
       {lastActiveLesson && lastActiveTopic && (
         <div
-          className="card"
+          className="card continue-card"
           style={{
-            padding: '20px 24px',
+            padding: '20px',
             marginBottom: '28px',
             background: 'var(--bg-surface)',
             borderLeft: '4px solid var(--accent-primary)',

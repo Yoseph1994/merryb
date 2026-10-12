@@ -95,12 +95,15 @@ export const SentenceBuilderEx: React.FC<Props> = ({
               disabled={isSubmitted}
               style={{
                 background: 'var(--accent-subtle)',
-                border: '1px solid var(--accent-primary)',
+                border: '1.5px solid var(--accent-primary)',
                 color: 'var(--accent-primary)',
                 fontWeight: 600,
-                padding: '6px 12px',
-                borderRadius: 'var(--radius-sm)',
-                fontSize: '0.95rem',
+                padding: '10px 16px',
+                borderRadius: 'var(--radius-md)',
+                fontSize: '1rem',
+                minHeight: '44px',
+                display: 'inline-flex',
+                alignItems: 'center',
                 cursor: isSubmitted ? 'default' : 'pointer'
               }}
             >
@@ -111,7 +114,7 @@ export const SentenceBuilderEx: React.FC<Props> = ({
       </div>
 
       {/* Available words bank */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '14px' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '14px' }}>
         {availableWords.map(item => (
           <button
             key={item.id}
@@ -119,14 +122,17 @@ export const SentenceBuilderEx: React.FC<Props> = ({
             disabled={item.used || isSubmitted}
             style={{
               background: 'var(--bg-surface)',
-              border: '1px solid var(--border-medium)',
+              border: '1.5px solid var(--border-medium)',
               color: 'var(--text-main)',
               fontWeight: 600,
-              padding: '8px 14px',
-              borderRadius: 'var(--radius-sm)',
-              fontSize: '0.95rem',
+              padding: '10px 16px',
+              borderRadius: 'var(--radius-md)',
+              fontSize: '1rem',
+              minHeight: '44px',
+              display: 'inline-flex',
+              alignItems: 'center',
               cursor: item.used || isSubmitted ? 'default' : 'pointer',
-              opacity: item.used ? 0.3 : 1
+              opacity: item.used ? 0.25 : 1
             }}
           >
             {item.text}

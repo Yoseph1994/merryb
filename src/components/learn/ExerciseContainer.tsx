@@ -82,7 +82,7 @@ export const ExerciseContainer: React.FC<Props> = ({
   };
 
   return (
-    <div className="card" style={{ padding: '24px', marginBottom: '20px' }}>
+    <div className="card exercise-card">
       {/* Exercise progress count */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
         <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -96,7 +96,7 @@ export const ExerciseContainer: React.FC<Props> = ({
       </div>
 
       {/* Prompt / Question */}
-      <h3 style={{ fontSize: '1.15rem', fontWeight: 600, color: 'var(--text-main)', lineHeight: 1.5, marginBottom: '20px' }}>
+      <h3 style={{ fontSize: '1.18rem', fontWeight: 600, color: 'var(--text-main)', lineHeight: 1.5, marginBottom: '20px' }}>
         {exercise.prompt}
       </h3>
 
@@ -176,7 +176,7 @@ export const ExerciseContainer: React.FC<Props> = ({
             <div style={{ fontWeight: 700, fontSize: '0.98rem', color: isCorrect ? 'var(--color-success-text)' : 'var(--color-error-text)', marginBottom: '4px' }}>
               {isCorrect ? 'Well done!' : 'Not quite yet.'}
             </div>
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
+            <div style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
               {exercise.explanation}
             </div>
           </div>
@@ -184,7 +184,7 @@ export const ExerciseContainer: React.FC<Props> = ({
       )}
 
       {/* Action Footer */}
-      <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
+      <div className="exercise-action-footer">
         {!isSubmitted ? (
           <button
             className="btn btn-primary"
