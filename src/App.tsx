@@ -12,12 +12,14 @@ import { AnnouncementLab } from './components/AnnouncementLab';
 import { MistakeVault } from './components/MistakeVault';
 import { MotivationLounge } from './components/MotivationLounge';
 import { StatsModal } from './components/StatsModal';
+import { TenseTest } from './components/TenseTest';
 
-type ActiveView = 'home' | 'mock_exam' | 'speed_blitz' | 'announcement_lab' | 'mistake_vault' | 'category_drill' | 'motivation';
+type ActiveView = 'home' | 'mock_exam' | 'speed_blitz' | 'announcement_lab' | 'mistake_vault' | 'category_drill' | 'motivation' | 'tense_test';
 
 export function App() {
   const [stats, setStats] = useState<UserStats>(loadUserStats);
   const [activeView, setActiveView] = useState<ActiveView>('home');
+  const [tenseInitialMode, setTenseInitialMode] = useState<'intro' | 'masterclass'>('intro');
   const [drillCategory, setDrillCategory] = useState<QuestionCategory>('grammar');
   const [showStatsModal, setShowStatsModal] = useState(false);
   const [installPrompt, setInstallPrompt] = useState<any>(null);
@@ -118,6 +120,74 @@ export function App() {
               </button>
             </div>
           )}
+
+          {/* Big Distinct "✈️ Tense Test" Entry Banner */}
+          <div
+            className="tense-hero-entry"
+            onClick={() => {
+              sound.playTap();
+              setTenseInitialMode('intro');
+              setActiveView('tense_test');
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Start Cabin Crew Tense Test"
+          >
+            <div className="tense-hero-content">
+              <div className="tense-hero-icon-container">
+                ✈️
+              </div>
+              <div className="tense-hero-title-group">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px', flexWrap: 'wrap' }}>
+                  <span className="exam-tag">
+                    CABIN CREW ENTRANCE EXAM
+                  </span>
+                  <span style={{ fontSize: '0.72rem', color: 'var(--et-gold-light)', fontWeight: 700, background: 'rgba(245, 183, 0, 0.2)', padding: '2px 8px', borderRadius: '10px' }}>
+                    FEATURED
+                  </span>
+                  <span style={{ fontSize: '0.72rem', color: '#a7f3d0', fontWeight: 700, background: 'rgba(14, 168, 89, 0.2)', padding: '2px 8px', borderRadius: '10px' }}>
+                    🎓 MASTERCLASS INCLUDED
+                  </span>
+                </div>
+                <h2>✈️ Tense Test</h2>
+                <div className="tense-hero-subtitle">
+                  20 questions · instant explanations
+                </div>
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+              <button
+                className="btn-secondary"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  sound.playTap();
+                  setTenseInitialMode('masterclass');
+                  setActiveView('tense_test');
+                }}
+                style={{
+                  padding: '10px 16px',
+                  fontSize: '0.85rem',
+                  borderColor: 'var(--et-gold-primary)',
+                  color: 'var(--et-gold-light)'
+                }}
+              >
+                🎓 Masterclass
+              </button>
+              <button
+                className="tense-hero-btn"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  sound.playTap();
+                  setTenseInitialMode('intro');
+                  setActiveView('tense_test');
+                }}
+              >
+                Take Test <ArrowRight size={16} />
+              </button>
+            </div>
+          </div>
 
           {/* Practice Modes Section Title */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
@@ -390,6 +460,15 @@ export function App() {
       {activeView === 'motivation' && (
         <MotivationLounge
           stats={stats}
+          onBack={() => setActiveView('home')}
+        />
+      )}
+
+      {activeView === 'tense_test' && (
+        <TenseTest
+          stats={stats}
+          initialMode={tenseInitialMode}
+          onUpdateStats={(updated) => updateStats(updated)}
           onBack={() => setActiveView('home')}
         />
       )}
