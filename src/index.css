@@ -678,3 +678,254 @@ body {
   padding: 0 8px;
   font-size: 1.2rem;
 }
+
+/* ==========================================
+   TENSE TEST FEATURE STYLES
+   ========================================== */
+.tense-test-wrapper {
+  animation: fadeIn 0.3s ease;
+  margin-bottom: 30px;
+}
+
+/* Main Page Featured Hero Card */
+.tense-hero-entry {
+  position: relative;
+  background: linear-gradient(135deg, rgba(245, 183, 0, 0.18) 0%, rgba(0, 112, 56, 0.3) 55%, rgba(6, 30, 19, 0.8) 100%);
+  border: 2px solid var(--et-gold-primary);
+  border-radius: var(--radius-xl);
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(245, 183, 0, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tense-hero-entry:hover {
+  transform: translateY(-4px);
+  border-color: var(--et-gold-light);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55), 0 0 35px rgba(245, 183, 0, 0.35);
+}
+
+.tense-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.tense-hero-icon-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--et-gold-primary), #c48c00);
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 6px 20px rgba(245, 183, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.tense-hero-title-group h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.tense-hero-subtitle {
+  color: var(--et-gold-light);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tense-hero-btn {
+  background: linear-gradient(135deg, var(--et-gold-primary), #d49800);
+  color: #061a11;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(245, 183, 0, 0.35);
+  transition: all 0.2s;
+}
+
+.tense-hero-entry:hover .tense-hero-btn {
+  background: #fff;
+  color: #061a11;
+  transform: scale(1.04);
+}
+
+@media (max-width: 640px) {
+  .tense-hero-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .tense-hero-content {
+    width: 100%;
+  }
+  .tense-hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Google Form Header Styling */
+.google-form-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(245, 183, 0, 0.3);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
+}
+
+.google-form-top-accent {
+  height: 10px;
+  width: 100%;
+  background: linear-gradient(90deg, #007038 0%, #007038 45%, #f5b700 45%, #f5b700 80%, #d81e05 80%, #d81e05 100%);
+}
+
+.google-form-header {
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.exam-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--et-gold-light);
+  background: rgba(245, 183, 0, 0.15);
+  border: 1px solid rgba(245, 183, 0, 0.3);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.exam-time-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.google-form-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.google-form-description {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.google-form-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.meta-badge {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.meta-badge strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.meta-badge span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.google-form-section {
+  padding: 24px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.google-form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.google-form-input {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(6, 20, 14, 0.9);
+  border: 1.5px solid rgba(245, 183, 0, 0.3);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.google-form-input:focus {
+  border-color: var(--et-gold-primary);
+  box-shadow: 0 0 15px rgba(245, 183, 0, 0.25);
+  background: rgba(8, 26, 18, 0.95);
+}
+
+.google-form-footer {
+  padding: 24px 28px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.start-exam-btn {
+  padding: 14px 32px;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+}
+
