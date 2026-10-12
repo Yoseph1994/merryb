@@ -1,100 +1,167 @@
-import { UserStats } from '../types';
+import { UserStudyState, LessonProgress, ExamAttempt, WeakSpot, TopicId } from '../types';
 
-const STATS_KEY = 'skywings_et_stats_v1';
+const STORAGE_KEY = 'merry_study_app_state_v2';
 
-export const DEFAULT_USER_STATS: UserStats = {
+export const DEFAULT_STUDY_STATE: UserStudyState = {
   userName: 'Merry',
-  avatar: '👩🏾‍✈️',
-  streakDays: 1,
-  lastActiveDate: new Date().toISOString().split('T')[0],
-  totalXp: 120,
-  level: 1,
-  totalAnswered: 0,
-  correctAnswered: 0,
-  categoryStats: {
-    grammar: { total: 0, correct: 0 },
-    spelling: { total: 0, correct: 0 },
-    vocabulary: { total: 0, correct: 0 },
-    situational: { total: 0, correct: 0 },
-  },
-  mockExamsCompleted: 0,
-  bestMockScore: 0,
-  speedRunsCompleted: 0,
-  bestSpeedRunScore: 0,
-  missedQuestionIds: [],
-  bookmarkedQuestionIds: [],
-  soundEnabled: true,
+  theme: 'light',
+  lastActiveLessonId: 'tenses-01',
+  lessonProgress: {},
+  examHistory: [],
+  weakSpots: []
 };
 
-export function loadUserStats(): UserStats {
+export function loadStudyState(): UserStudyState {
   try {
-    const raw = localStorage.getItem(STATS_KEY);
-    if (!raw) return DEFAULT_USER_STATS;
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return DEFAULT_STUDY_STATE;
     const parsed = JSON.parse(raw);
-
-    // Calculate streak maintenance
-    const today = new Date().toISOString().split('T')[0];
-    const last = parsed.lastActiveDate || today;
-
-    if (last !== today) {
-      const lastDate = new Date(last);
-      const currentDate = new Date(today);
-      const diffTime = Math.abs(currentDate.getTime() - lastDate.getTime());
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-      if (diffDays === 1) {
-        parsed.streakDays = (parsed.streakDays || 1) + 1;
-      } else if (diffDays > 1) {
-        parsed.streakDays = 1; // Reset streak if missed more than 1 day
-      }
-      parsed.lastActiveDate = today;
-      saveUserStats(parsed);
-    }
-
-    return { ...DEFAULT_USER_STATS, ...parsed };
-  } catch {
-    return DEFAULT_USER_STATS;
+    return {
+      ...DEFAULT_STUDY_STATE,
+      ...parsed,
+      lessonProgress: parsed.lessonProgress || {},
+      examHistory: parsed.examHistory || [],
+      weakSpots: parsed.weakSpots || []
+    };
+  } catch (err) {
+    console.error('Failed to load study state:', err);
+    return DEFAULT_STUDY_STATE;
   }
 }
 
-export function saveUserStats(stats: UserStats): void {
+export function saveStudyState(state: UserStudyState): void {
   try {
-    localStorage.setItem(STATS_KEY, JSON.stringify(stats));
-  } catch (e) {
-    console.error('Failed to save stats:', e);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch (err) {
+    console.error('Failed to save study state:', err);
   }
 }
 
-export function calculateLevel(xp: number): { level: number; rankTitle: string; nextLevelXp: number; progressPercent: number } {
-  // Level progression
-  const levels = [
-    { level: 1, xp: 0, title: 'Flight Cadet Trainee' },
-    { level: 2, xp: 250, title: 'Junior Cabin Crew' },
-    { level: 3, xp: 600, title: 'Cabin Service Specialist' },
-    { level: 4, xp: 1200, title: 'Senior Flight Attendant' },
-    { level: 5, xp: 2000, title: 'Chief Purser' },
-    { level: 6, xp: 3200, title: 'Gold Wings Ambassador' },
-  ];
+export function recordLessonScore(
+  lessonId: string,
+  score: number, // 0 to 4
+  total: number = 4
+): UserStudyState {
+  const current = loadStudyState();
+  const existing = current.lessonProgress[lessonId] || {
+    status: 'not_started',
+    currentStepIndex: 0,
+    attemptsCount: 0,
+    bestScore: 0,
+    firstTryPerfect: false,
+    lastPracticedAt: new Date().toISOString()
+  };
 
-  let current = levels[0];
-  let next = levels[1];
+  const isFirstTry = existing.attemptsCount === 0;
+  const isPerfect = score === total;
+  const isPassing = score >= 3;
 
-  for (let i = levels.length - 1; i >= 0; i--) {
-    if (xp >= levels[i].xp) {
-      current = levels[i];
-      next = levels[i + 1] || { level: current.level + 1, xp: current.xp + 1500, title: 'Gold Wings Certified' };
-      break;
-    }
+  let newStatus = existing.status;
+  if (isPassing) {
+    newStatus = (isFirstTry && isPerfect) || existing.firstTryPerfect ? 'mastered' : 'completed';
+  } else {
+    newStatus = 'in_progress';
   }
 
-  const xpInLevel = xp - current.xp;
-  const xpNeeded = next.xp - current.xp;
-  const progressPercent = Math.min(100, Math.max(0, Math.round((xpInLevel / xpNeeded) * 100)));
-
-  return {
-    level: current.level,
-    rankTitle: current.title,
-    nextLevelXp: next.xp,
-    progressPercent,
+  const updatedProgress: LessonProgress = {
+    status: newStatus,
+    currentStepIndex: 0, // Finished
+    attemptsCount: existing.attemptsCount + 1,
+    bestScore: Math.max(existing.bestScore, score),
+    firstTryPerfect: isFirstTry ? isPerfect : existing.firstTryPerfect,
+    lastPracticedAt: new Date().toISOString()
   };
+
+  const updatedState: UserStudyState = {
+    ...current,
+    lastActiveLessonId: lessonId,
+    lessonProgress: {
+      ...current.lessonProgress,
+      [lessonId]: updatedProgress
+    }
+  };
+
+  saveStudyState(updatedState);
+  return updatedState;
+}
+
+export function saveLessonStepProgress(lessonId: string, stepIndex: number): void {
+  const current = loadStudyState();
+  const existing = current.lessonProgress[lessonId] || {
+    status: 'in_progress',
+    currentStepIndex: stepIndex,
+    attemptsCount: 0,
+    bestScore: 0,
+    firstTryPerfect: false,
+    lastPracticedAt: new Date().toISOString()
+  };
+
+  const updatedState: UserStudyState = {
+    ...current,
+    lastActiveLessonId: lessonId,
+    lessonProgress: {
+      ...current.lessonProgress,
+      [lessonId]: {
+        ...existing,
+        status: existing.status === 'not_started' ? 'in_progress' : existing.status,
+        currentStepIndex: stepIndex,
+        lastPracticedAt: new Date().toISOString()
+      }
+    }
+  };
+  saveStudyState(updatedState);
+}
+
+export function recordExamAttempt(attempt: ExamAttempt): UserStudyState {
+  const current = loadStudyState();
+  const updatedHistory = [attempt, ...current.examHistory];
+
+  // Update Weak Spots from mistakes
+  const weakSpotsMap: Record<string, WeakSpot> = {};
+  current.weakSpots.forEach((w) => {
+    weakSpotsMap[w.lessonItemId] = { ...w };
+  });
+
+  attempt.mistakes.forEach((m) => {
+    if (m.lessonItemId) {
+      if (!weakSpotsMap[m.lessonItemId]) {
+        weakSpotsMap[m.lessonItemId] = {
+          lessonItemId: m.lessonItemId,
+          topicId: m.topicId,
+          topicTitle: formatTopicTitle(m.topicId),
+          lessonTitle: m.lessonItemId,
+          mistakeCount: 1,
+          lastMistakeDate: attempt.date
+        };
+      } else {
+        weakSpotsMap[m.lessonItemId].mistakeCount += 1;
+        weakSpotsMap[m.lessonItemId].lastMistakeDate = attempt.date;
+      }
+    }
+  });
+
+  const updatedWeakSpots = Object.values(weakSpotsMap).sort(
+    (a, b) => b.mistakeCount - a.mistakeCount
+  );
+
+  const updatedState: UserStudyState = {
+    ...current,
+    examHistory: updatedHistory,
+    weakSpots: updatedWeakSpots
+  };
+
+  saveStudyState(updatedState);
+  return updatedState;
+}
+
+function formatTopicTitle(id: TopicId): string {
+  switch (id) {
+    case 'tenses': return 'Tenses';
+    case 'conditionals': return 'Conditional Sentences';
+    case 'agreement': return 'Subject-Verb Agreement';
+    case 'paragraphs': return 'Paragraph Tricks';
+    case 'vocabulary': return 'Vocabulary';
+    case 'spelling': return 'Spelling';
+    default: return id;
+  }
 }
